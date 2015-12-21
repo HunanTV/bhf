@@ -1,0 +1,60 @@
+//用于hack各种第三方模块，或者浏览器如ie6
+div.simditor div.simditor-body{
+  min-height: 160px;
+}
+
+.simditor .simditor-body img, .editor-style img{
+  max-width: 99%;
+}
+
+.dropdown{
+  text-align: left;
+
+  i.icon, span{
+    display: block;
+    float: left;
+  }
+
+  span{
+    margin: 2px 0 0 10px;
+  }
+
+  li{
+    overflow: hidden;
+  }
+
+  a{
+    padding: 6px 10px !important;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+//模态窗口想着
+.close-modal{
+  .sprite();
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  background-position: -200px -360px;
+  position: absolute;
+  right: 0;
+  margin: 13px 10px 0 0;
+  background-color: transparent;
+}
+
+.editor-style ul li, .simditor-body ul li{
+  list-style: disc;
+}
+
+.editor-style ol li, .simditor-body ol li{
+  list-style: decimal;
+}
+
+.simditor .simditor-body pre, .editor-style pre{
+  max-width: 800px;
+}
+
+.dropdown-menu li.spliter{
+  border-bottom: 1px solid #CCC;
+}

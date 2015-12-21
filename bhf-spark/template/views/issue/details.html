@@ -1,0 +1,182 @@
+<div class="inner-view">
+    
+    <article class="issue-details" issue-details id="issue-details">
+        <div class="not-found" ng-show="notFound">
+            <p>
+                <i class="icon"></i>
+                404 Not Found
+            </p>
+        </div>
+
+        <div ng-show="assetPreviewer.show" class="asset-unwind-container">
+            <h3>{{assetPreviewer.bundleName}}
+                <button class="default transparent" ng-click="onClickCloseAssetPreviewer($event)">
+                    <i class="small icon"></i>
+                </button>
+            </h3>
+            <asset-bundle-unwind></asset-bundle-unwind>
+        </div>
+
+        <div ng-show="!notFound" class="full">
+            <div style=" height: 100%; position:relative;">
+                <!--展示一个issue的所有内容-->
+                <header>
+                    <div class="project-name">
+                        <i class="small icon cell"></i>
+                        <label>{{project.title}}</label>
+                    </div>
+
+                    <div class="owner" dropdown data-name="issue:owner" data-text-container="label.display" data-selected="{{issue.owner}}" ng-hide="articleOnly" data-empty="责任人">
+                        <i class="icon small cell"></i>
+                        <label class="display">{{issue.owner_name || '未指定'}}</label>
+                        <project-member-dropdown data-items="{{projectMember}}"></project-member-dropdown>
+                    </div>
+
+                    <div class="finish-date" ng-hide="articleOnly">
+                        <button datetime-picker  data-name="plan_finish_time" data-date="{{issue.plan_finish_time}}">
+                            <i class="icon small cell"></i>
+                            <span>　{{(issue.plan_finish_time | date:'yyyy-MM-dd') || '完成日期' }}</span>
+                        </button>
+                    </div>
+
+                    <div class="priority" dropdown data-name="issue:priority" data-text-container="label.display" data-selected="{{issue.priority}}" ng-hide="articleOnly" data-empty="请选择优先级" title="请选择优先级">
+                        <i class="icon small cell priority-{{issue.priority}}"></i>
+                        <label class="display">中</label>
+                        <issue-priority-dropdown data-project-id="{{issue.project_id}}" data-id="{{issue.id}}"></issue-priority-dropdown>
+                    </div>
+
+                    <div class="category text-only" dropdown data-name="issue:category" data-text-container="label.display" data-selected="{{issue.category_id}}" title="请选择分类" data-empty="请选择分类">
+                        <i class="icon small cell dummy"></i>
+                        <label class="display text-overflow">选择分类</label>
+                        <project-category-dropdown data-project-id="{{issue.project_id}}" data-id="{{issue.category_id}}"></project-category-dropdown>
+                    </div>
+
+                    <div class="tag text-only" dropdown data-name="issue:tag" data-text-container="label.display" data-selected="{{issue.tag}}" title="请选择类型" data-empty="请选择类型" ng-show="articleOnly">
+                        <i class="icon small cell dummy"></i>
+                        <label class="display text-overflow">任务类型</label>
+                        <issue-tag-dropdown></issue-tag-dropdown>
+                    </div>
+
+                    <div class="version text-only" dropdown data-name="issue:version" data-text-container="label.display" data-selected="{{issue.version_id}}" title="请选择版本" ng-hide="articleOnly" data-empty="请选择版本">
+                        <i class="icon small cell dummy"></i>
+                        <label class="display text-overflow">选择版本</label>
+                        <project-version-dropdown data-show-more="false"></project-version-dropdown>
+                    </div>
+
+                    
+                                        <!--
+                    <div class="assets">
+                        <i class="icon small cell"></i>
+                        <label>附件</label>
+                    </div>
+                    <div class="trash">
+                        <i class="icon small cell"></i>
+                        <label>删除</label>
+                    </div>
+                    -->
+                </header>
+
+                <!--标题部分-->
+                <div class="issue panel" ng-click="onClickIssue($event)">
+                    <div class="title" issue-status-dropdown-action>
+                        <div class="issue-status" ng-click="onClickStatus($event, issue)">
+                            <i class="issue-status icon small" ng-class="issue.status"></i>
+                        </div>
+                        <input type="text" class="text" ng-show="editing" ng-model="issue.title" />
+                        <h3 ng-show="!editing">{{issue.title | removeCommand | removeTag}}</h3>
+
+                        <div class="toolbar">
+                            <a ng-click="onClickSplit($event, data)" href="javascript:void(0)" class="edit">
+                                <i class="icon split"></i>
+                                <span class="tollbar-text">拆分</span>
+                            </a>
+                            <a ng-click="onClickEdit($event, data)" href="javascript:void(0)" class="edit">
+                                <i class="icon edit"></i>
+                                <span class="tollbar-text">编辑</span>
+                            </a>
+                            <a ng-click="onClickDelete($event, data)" href="javascript:void(0)" class="delete">
+                                <i class="icon delete"></i>
+                                <span class="tollbar-text">删除</span>
+                            </a>
+                        </div>
+                        <issue-status-dropdown></issue-status-dropdown>
+                    </div>
+                    <div class="sub-title">
+                        <span class="creator">{{issue.creator_name || '创建者'}}</span> 创建于
+                        <span class="timestamp">{{issue.timestamp | date: 'yyyy-MM-dd HH:mm'}}</span>
+                        <span class="id">#{{issue.id}}</span>
+                        <span class="timestamp" ng-show="issue.plan_finish_time">计划完成：{{issue.plan_finish_time | date}}</span>
+                        <span class="timestamp" ng-show="issue.finish_time">实际完成：{{issue.finish_time | date}}</span>
+                        
+
+                        
+                        <!-- <issue-follow-list data-items="{{projectMember}}"></issue-follow-list> -->
+
+                        <window-change-button ng-show="needchange"></window-change-button>
+                    </div>
+
+                    <issue-follow-members></issue-follow-members>
+
+                    <issue-split ng-show="!editing"></issue-split>
+
+                    
+                    <div ng-if="issue.tag!='form'" class="content row editor-style" ng-bind-html="issue.content | unsafe" ng-show="!editing" full-size-image-previewer></div>
+                    <div ng-show="editing">
+                        <editor data-name="issue" data-show-always-top="{{showAlwaysTop}}" data-upload-url="{{uploadUrl}}"></editor>
+                    </div>
+                    
+                    <issue-form ng-if="issue.tag=='form'" class="issue-form view" data-type='1' data-editflag='-1' data-change='-1'></issue-form>
+                </div>
+
+                <!--附件-->
+                <div class="assets panel">
+                    <div class="title">
+                        <i class="icon small"></i>
+                        <h3>附件</h3>
+                    </div>
+                    <div class="content">
+                        <!--附件缩略图列表-->
+                        <asset-thumbnails></asset-thumbnails>
+                    </div>
+                </div>
+
+                <!--评论-->
+                <div class="comments panel">
+                    <div class="title">
+                        <i class="icon small"></i>
+                        <h3>评论</h3>
+                    </div>
+                    <div class="content">
+                        <comment-list></comment-list>
+                    </div>
+                </div>
+
+                <!--commit-->
+                <div class="commits panel" ng-hide="articleOnly">
+                    <div class="title">
+                        <i class="icon small"></i>
+                        <h3>代码记录</h3>
+                    </div>
+
+                    <div class="content">
+                        <commit-issue-list></commit-issue-list>
+                    </div>
+                </div>
+
+                <!--日志-->
+                <div class="logs panel">
+                    <div class="title">
+                        <i class="icon small"></i>
+                        <h3>操作日志</h3>
+                    </div>
+
+                    <div class="content">
+                        <issue-log></issue-log>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </article>
+    <comment-editor data-upload-url="{{uploadUrl}}"></comment-editor>
+</div>

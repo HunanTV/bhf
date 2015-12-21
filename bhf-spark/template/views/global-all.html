@@ -1,0 +1,185 @@
+<div>
+    <!--空页面-->
+    <textarea id="tmpl-global-blank-page">
+        <div class="blank-page">
+            <div class="inner">
+                <!--<p><i class="small icon"></i></p>-->
+            </div>
+        </div>
+    </textarea>
+
+    <!--git list-->
+    <textarea id="tmpl-global-git-list">
+        <ul class="git-list">
+            <li ng-repeat="account in gitAccounts track by $index" ng-click="onClickEdit($event, $index, account)">
+                <label>{{account}}</label>
+                <button ng-click="onClickRemove($event, $index)">
+                    <i class="icon small remove"></i>
+                </button>
+            </li>
+            <li class="create">
+                <input type="text" class="text medium" placeholder="输入git地址后回车" class="medium" ng-keypress="onKeypressAdd($event)" ng-blur="onKeyupAddLastItem($event)" ng-model="currentText"/>
+            </li>
+        </ul>
+    </textarea>
+
+    <!--
+    <textarea id="tmpl-global-web-file-upload-file-list">
+        <div id="uploader" class="file-upload-box">
+            <div id="uploaderList" class="uploader-list"></div>
+            <div class="btns">
+                <div id="picker">选择文件</div>
+                <button id="ctlBtn" class="file-upload-btn">开始上传</button>
+            </div>
+        </div>
+    </textarea>
+    <textarea id="tmpl-global-web-file-upload-file-item">
+        <div id="$file.id" class="item">
+            <h4 class="info">$file.name</h4>
+            <p class="state">等待上传...</p>
+        </div>
+    </textarea>
+    <textarea id="tmpl-global-web-file-upload-progressbar">
+        <div class="progress progress-striped active">
+            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+    </textarea>
+    -->
+
+    <!--header上的toolbar-->
+    <textarea id="tmpl-global-header-toolbar">
+        <div class="header-toolbar">
+            <div class="search">
+                <input type="text" placeholder="请输入搜索关键字" class="text" instant-search />
+            </div>
+            <div class="menu">
+                <div class="profile" dropdown>
+                    <i class="small icon"></i>
+                    <span>我的</span>
+                    <div class="dropdown dropdown-tip">
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a ng-click="onClickIssues()">个人中心</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickFollow()">我的关注</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickTeam()">我的团队</a>
+                            </li>
+                            <li class="spliter">
+                                <a ng-click="onClickReport()">我的报表</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickSetting(0)">个人资料</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickSetting(2)">绑定微信</a>
+                            </li>
+                            <li class="spliter">
+                                <a ng-click="onClickSetting(3)">通知设置</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickSetting(1)">修改密码</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickLogout()">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <member-message-notifier></member-message-notifier>
+                <div class="help" dropdown>
+                    <i class="small icon"></i>
+                    <span>关于</span>
+                    <div class="dropdown dropdown-tip">
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a ng-click="onClickByUrl('/wiki/17/issue')">帮助</a>
+                            </li>
+                            <li>
+                                <a ng-click="onClickByUrl('/wiki/17/category/30/issue')">反馈建议</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="more" dropdown>
+                    <i class="small icon"></i>
+                    <span>更多</span>
+                    <div class="dropdown dropdown-tip">
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a ng-click="onClickByUrl('/project/107/version/101/issue')">运维表单</a>
+                                <a ng-click="onClickByUrl('/project/147/version/150/category/316/issue?title=申请')">录音申请</a>
+                                <a ng-click="onClickByUrl('/project/183/version/191/category/395/issue?title=申请')">前端需求</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-global-message">
+        <div class="global-message">
+            <span class="">公告：</span>
+            <a href="/wiki/17/category/90/issue/2607">BHF 2.0正式发布，新增19项新功能</a>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-pagination">
+        <div class="pagination">
+            <ul>
+                <li ng-class="{disabled: noPrevious()}">
+                    <a href ng-click="selectPage(1)">首页</a>
+                </li>
+                <li ng-class="{disabled: noPrevious()}">
+                    <a href ng-click="previousPage()">上一页</a>
+                </li>
+                <li ng-repeat="page in pages track by $index" ng-class="{active: page.active}">
+                    <a href ng-click="selectPage(page.number)">{{page.text}}</a>
+                </li>
+                <li ng-class="{disabled: noNext()}">
+                    <a href ng-click="nextPage()">下一页</a>
+                </li>
+                <li ng-class="{disabled: noNext()}">
+                    <a href ng-click="selectPage(totalPages)">尾页</a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+    <textarea id="tmpl-header">
+        <header>
+            <!--项目信息-->
+            <div class="overview">
+                <a href="/" class="home">
+                    <i class="icon small"></i>
+                </a>
+                <div class="content" ng-show="project">
+                    <div class="title">
+                        <label>{{project.title}}</label>
+                        <i class="small icon"></i>
+                    </div>
+                    <i class="small icon open"></i>
+                    <div class="version" dropdown data-name="project:version" data-text-container="label.display" data-selected="{{projectVersion}}" data-exclude-value="-1">
+                        <label class="display">{{projectVersion | currentProjectVersion}}</label>
+                        <i class="small icon"></i>
+                        <project-version-dropdown data-show-more="true"></project-version-dropdown>
+                    </div>
+                </div>
+                <div class="content" ng-show="title">
+                    <div class="title">
+                        <label>{{title}}</label>
+                        <i class="small icon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <i class="icon"></i>
+            </div>
+                <!--右边的boolbar-->
+            <header-toolbar></header-toolbar>
+        </header>
+    </textarea>
+</div>

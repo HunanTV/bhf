@@ -1,0 +1,95 @@
+<div>
+    <textarea id="tmpl-commit-list">
+        <div class="commit-list list">
+            <header>
+                <h3>Commit列表 <button class="primary default btn_import" ng-click="showImportModal()">同步</button></h3>
+            </header>
+            <ul class="details">
+                <li class="row" ng-repeat="item in commit.items">
+                    <a href="/{{item | projectLink:'normal'}}/commit/{{item.sha}}?url={{item.url}}">{{item.message}}</a>
+                    <div class="info">
+                        <span class="memo">
+                            {{item.sha | limitTo: 10}}
+                        </span>
+                        <span class="memo">{{item.realname}}</span>
+                        <span class="memo">{{item.timestamp | date: 'yyyy-MM-dd hh:mm'}}</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="empty" ng-show="commit.items.length == 0">
+                没有任何Commit，需要<a href="/wiki/17/issue/2993">了解如何同步到Commit到BHF吗？</a>
+            </div>
+            <commit-import-modal></commit-import-modal>
+
+            <pagination ng-hide="commit.pagination.pageCount<2" data-uuid="commit_pagination" data-paginations={{commit.pagination}}></pagination>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-commit-details">
+        <iframe frameborder="0" width="100%" height="100%" ng-src="{{url}}" equal-parent-height></iframe>
+    </textarea>
+
+    <!--issue的commit列表-->
+    <textarea id="tmpl-commit-issue-list">
+        <div>
+            <ul class="list">
+                <li ng-repeat="item in commits" class="row">
+                    <span class="timestamp gray">{{item.timestamp | date: 'medium'}}</span>
+                    <span class="realname gray">{{item.realname}}</span>
+
+                    <a href="{{item.url}}" target="_blank">{{item.message}}</a>
+                </li>
+            </ul>
+
+            <div class="empty" ng-show="commits.length == 0">
+                哟，此任务还没有提交任何代码呢
+            </div>
+        </div>
+    </textarea>
+    <!--commit导入-->
+    <textarea id="tmpl-commit-import">
+      <div class="modal modal_import-commit">
+          <div class="inner">
+              <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+              <header>
+                  Commits Import
+              </header>
+              <section>
+                  <form class="standard-form">
+                      <div class="row">
+                          <label class="caption">
+                              git仓库:
+                          </label>
+                          <select class="form-select"
+                                  ng-options="item as item.path_with_namespace for item in gits track by item.id"
+                                  ng-model="git_project"
+                                  ng-change="gitChanges()"
+                            >
+                          </select>
+                      </div>
+                      <div class="row">
+                          <label class="caption">
+                              分支名:
+                          </label>
+                          <select class="form-select"
+                                  ng-options="item for item in git_project.branches"
+                                  ng-model="git_project_branch">
+                          </select>
+                      </div>
+                      <div class="row">
+                          <label class="caption">
+                              导入条数：
+                          </label>
+                          <input class="small text" type="text" placeholder="最多支持最近100条导入(默认50)" ng-model="limit" maxlength="40"/>
+                      </div>
+                      <div class="row control">
+                          <button class="primary default" ng-click="onClickSave()">导入</button>
+                          <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                      </div>
+                  </form>
+              </section>
+          </div>
+      </div>
+    </textarea>
+</div>

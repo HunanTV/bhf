@@ -1,0 +1,330 @@
+<div>
+    <!--修改用户的密码-->
+    <!--<textarea id="tmpl-change-password">-->
+        <!--<ul>-->
+            <!--<li>-->
+                <!--<label class="caption">-->
+                    <!--旧密码-->
+                <!--</label>-->
+                <!--<input type="text">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<label class="caption">-->
+                    <!--新密码-->
+                <!--</label>-->
+                <!--<input type="text">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<label class="caption">-->
+                    <!--重复密码-->
+                <!--</label>-->
+                <!--<input type="text">-->
+            <!--</li>-->
+            <!--<li class="control">-->
+                <!--<button class="primary">保存</button>-->
+                <!--<button class="cancel">取消</button>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</textarea>-->
+
+    <!--用户列表
+    <textarea id="tmpl-member-list">
+        <ul>
+            <li ng-repeat="member in members">
+
+            </li>
+        </ul>
+    </textarea>
+    -->
+
+    <!--项目成员列表-->
+    <textarea id="tmpl-project-member-list">
+        <member-creator-model></member-creator-model>
+        <div class="list project-list-panel member-list">
+            <header>
+                <h3>项目成员</h3>
+            </header>
+            <div class="create">
+                <input type="text" placeholder="请输入将要添加用户的姓名" members-lookup autofocus />
+            </div>
+            <ul class="details">
+                <project-member-item></project-member-item>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--项目成员列表 item -->
+    <textarea id="tmpl-project-member-item">
+        <li ng-repeat="member in projectMember" class="row">
+            <span class="name">{{member.realname}}</span>
+            <span class="email">{{member.email}}</span>
+
+            <div class="control">
+                <a class="remove" ng-if="member.member_id!=user.member_id" ng-click="removeProjectMember(member)">删除</a>
+                <a class="remove" ng-if="member.member_id==user.member_id" ng-click="removeProjectMember(member)">退出</a>
+                <div class="role" dropdown data-name="project-member-item">
+                    {{ member.role | projectMemberRole }}
+                    <i class="small icon cell"></i>
+                    <project-member-role-dropdown></project-member-role-dropdown>
+                </div>
+            </div>
+        </li>
+    </textarea>
+    <!--项目成员角色 dropdown -->
+    <textarea id="tmpl-project-member-role-dropdown">
+        <div class="dropdown dropdown-tip">
+            <ul class="dropdown-menu">
+                <li><a data-value="d">开发</a></li>
+                <li><a data-value="l">Leader</a></li>
+                <li><a data-value="p">产品</a></li>
+                <li><a data-value="t">测试</a></li>
+                <li><a data-value="g">客人</a></li>
+            </ul>
+        </div>
+    </textarea>
+
+
+
+    <!--团队成员列表 item -->
+    <textarea id="tmpl-team-member-item">
+        <li ng-repeat="member in teamMember" class="row">
+            <span class="name">{{member.realname}}</span>
+            <span class="email">{{member.email}}</span>
+
+            <div class="control">
+                <span class="email">{{member.status | teamMemberStatus}}</span>
+                <a class="remove" ng-click="removeTeamMember(member)">删除</a>
+                <div class="role" dropdown data-name="team-member-item">
+                    {{ member.role | teamMemberRole }}
+                    <i class="small icon cell"></i>
+                    <team-member-role-dropdown></team-member-role-dropdown>
+                </div>
+            </div>
+        </li>
+    </textarea>
+    <!--团队成员角色 dropdown -->
+    <textarea id="tmpl-team-member-role-dropdown">
+        <div class="dropdown dropdown-tip">
+            <ul class="dropdown-menu">
+                <li><a data-value="m">成员</a></li>
+                <li><a data-value="l">Leader</a></li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--修改密码-->
+    <textarea id="tmpl-member-change-password">
+        <div class="panel">
+            <form class="standard-form" ng-submit="onClickSave()">
+                <div class="row">
+                    <label class="caption">
+                        原密码
+                    </label>
+                    <input class="medium text" type="password" placeholder="您的旧密码"
+                           ng-model="profile.old_password" required/>
+                </div>
+
+                <div class="row">
+                    <label class="caption">
+                        新密码
+                    </label>
+                    <input class="medium text" type="password" placeholder="请输入新密码"
+                           ng-model="profile.new_password" required ng-minlength="6"/>
+                </div>
+
+                <div class="row">
+                    <label class="caption">
+                        重复密码
+                    </label>
+                    <input class="medium text" type="password" placeholder="两次输入的密码必需一致"
+                           ng-model="profile.new_password2" required ng-minlength="6"/>
+                </div>
+
+                <div class="row control">
+                    <button class="primary default">保存</button>
+                    <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                </div>
+            </form>
+        </div>
+    </textarea>
+
+    <!--用户资料修改-->
+    <textarea id="tmpl-member-profile">
+        <div class="panel">
+            <form class="standard-form">
+                <div class="row">
+                    <label class="caption">
+                        用户名
+                    </label>
+                    <input class="medium text" type="text" placeholder="用于登录的用户名"
+                           ng-model="profile.username"/>
+                </div>
+
+                <div class="row">
+                    <label class="caption">
+                        姓名
+                    </label>
+                    <input class="medium text" type="text" placeholder="用户姓名"
+                           ng-model="profile.realname" />
+                </div>
+
+                <div class="row">
+                    <label class="caption">
+                        <a href="http://git.hunantv.com/profile/account"
+                           target="_blank" title="gitlab的个人密钥，用于BHF创建项目时自动新建git仓库. 点击查看自己的token">Git Token</a>
+                    </label>
+                    <input class="medium text" type="text" placeholder="用于创建项目自动新建git仓库"
+                           ng-model="profile.gitlab_token"/>
+                </div>
+
+                <div class="row">
+                  <label class="caption">
+                    邮箱
+                  </label>
+                  <input class="medium text" type="text" placeholder="用于接收邮件通知"
+                         ng-model="profile.email"/>
+                </div>
+                <div class="row">
+                    <label class="caption">
+                        Git帐号
+                    </label>
+                    <div class="inline">
+                        <git-list-editor  bean="bean"
+                                          max-count="5">
+                        </git-list-editor>
+                    </div>
+                </div>
+
+                <div class="row control">
+                    <button class="primary default" ng-click="onClickSave()">保存</button>
+                    <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                </div>
+            </form>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-member-notification">
+        <div class="panel">
+            <form class="standard-form">
+                <div class="row">
+                    <label class="caption">
+                        微信通知
+                    </label>
+                        <input type="checkbox" name="weixin" ng-true-value="1" ng-false-value="0" ng-model="profile.notification.weixin"/>
+                    <label class="caption">
+                        客户端推送
+                    </label>
+                        <input type="checkbox" name="client" ng-true-value="1" ng-false-value="0" ng-model="profile.notification.client"/>
+                </div>
+                <div class="row">
+                    <label class="caption">
+                        邮件通知
+                    </label>
+                        <input type="checkbox" name="email" ng-true-value="1" ng-false-value="0" ng-model="profile.notification.email"/>
+                    <label class="caption">
+                        实时通知
+                    </label>
+                        <input type="checkbox" name="realtime" ng-true-value="1" ng-false-value="0" ng-model="profile.notification.realtime"/>
+                </div>
+                <div class="row control">
+                    <button class="primary default" ng-click="onClickSave()">保存</button>
+                    <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                </div>
+            </form>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-member-weixin">
+        <div class="panel">
+            <form class="standard-form">
+                <p class="title">扫一扫下面二维码，关注企业微信号，然后绑定自己的微信</p>
+
+                <div class="row">
+                    <img src="images/weixin-qy-qrcode.jpg">
+                </div>
+
+                <div class="row">
+                    <label class="caption">
+                        <a href="http://bhf.hunantv.com/wiki/17/category/89/issue/7230?title=FAQs"
+                           target="_blank"
+                           title="微信号用于接收任务通知等，微信号不是昵称，点击查看如何获取自己的微信号"
+                          >
+                            微信号
+                        </a>
+                    </label>
+                    <input class="medium text" type="text" placeholder="用于接收微信通知"
+                           ng-model="weixin"/>
+                </div>
+                <div class="row control">
+                    <button class="primary default" ng-click="onClickSaveWeixin()">保存</button>
+                    <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                </div>
+            </form>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-member-setting">
+        <div class="modal">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <div class="simple-tab" simple-tab data-active-index="{{activeIndex}}">
+                    <ul class="nav" data-field="nav">
+                        <li>个人资料</li>
+                        <li>修改密码</li>
+                        <li>微信绑定</li>
+                        <li>通知设置</li>
+                    </ul>
+                    <div class="content" data-field="content">
+                        <member-profile action="account-profile"></member-profile>
+                        <member-change-password></member-change-password>
+                        <member-weixin></member-weixin>
+                        <member-notification></member-notification>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </textarea>
+     <!--创建成员-->
+    <textarea id="tmpl-member-creator">
+        <div class="modal">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <header>
+                    创建项目成员
+                </header>
+                <section>
+                    <member-profile action="create-member"></member-profile>
+                </section>
+            </div>
+        </div>
+    </textarea>
+
+    <!--消息提醒-->
+    <textarea id="tmpl-member-message-notifier">
+        <div  class="notify" ng-click="onClickNotifier($event)">
+            <i class="small icon">
+                <span class="badge red small" ng-show="message.pagination.recordCount > 0">{{message.pagination.recordCount}}</span>
+            </i>
+            <span>消息</span>
+            <div class="message-list">
+                <ul>
+                    <li class="title">
+                        您有{{message.pagination.recordCount}}条新消息
+                    </li>
+                    <li class="empty" ng-show="message.items.length == 0">没有任何新消息哦</li>
+                    <li ng-repeat="item in message.items">
+                        <p class="content">
+                            <a href="{{item.link}}" ng-click="onClickItem(item, true)" class="title">{{item.content | limitTo: 60}}</a>
+                            <a href="javascript:void(0)" class="readit" ng-click="onClickItem(item, false)">已读</a>
+                        </p>
+                    </li>
+                    <li class="footer" ng-show="message.items.length > 0">>
+                        <a href="javascript:void(0)" ng-click="onClickReadAll()">全部已读</a>
+                        <a href="javascript:void(0)">查看全部{{message.pagination.recordCount}}条消息</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </textarea>
+</div>

@@ -1,0 +1,231 @@
+<div>
+    <!--各种与project相关的编辑器-->
+
+    <!--创建项目，或者修改项目资料-->
+    <textarea id="tmpl-project-editor">
+        <div class="modal">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <header>
+                    {{editor_title}}项目
+                </header>
+                <section>
+                    <form class="standard-form">
+                        <div class="row">
+                            <label class="caption">
+                                项目名称
+                            </label>
+                            <input class="medium text" type="text" ng-model="data.title" maxlength="40"/>
+                        </div>
+
+                        <div class="row">
+                            <label class="caption">
+                                摘要说明
+                            </label>
+                            <input class="medium text" type="text" placeholder="一句话简单描述项目" ng-model="data.description" maxlength="40"/>
+                        </div>
+
+                        <div class="row">
+                            <label class="caption">
+                                项目状态
+                            </label>
+                            <div class="inline">
+                                <label>
+                                    <input type="radio" value="active" name="status" ng-model="data.status" /> 活动
+                                </label>
+
+                                <label>
+                                    <input type="radio" value="archive" name="status" ng-model="data.status"/> 存档
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row control">
+                            <button class="primary default" ng-click="onClickSave()">保存</button>
+                            <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                            <button class="delete default" ng-click="onClickDelete()" ng-show="data.id">删除</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </textarea>
+
+    <!--issue的分类管理-->
+    <textarea id="tmpl-issue-category-editor">
+        <div class="modal issue-category-editor">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <header>
+                    任务分类管理
+                </header>
+                <section>
+                    <form class="standard-form">
+                        <div class="row">
+                            <table class="standard-table full simple-line">
+                                <tr ng-repeat="item in category">
+                                    <td>{{item.title}}</td>
+                                    <td>{{item.short_title}}</td>
+                                    <td>{{item.issue_undone_total}}/{{item.issue_total}}</td>
+                                    <td class="right">
+                                        <a href="javascript:void(0)" ng-click="onClickEdit($event, item)">编辑</a> |
+                                        <a href="javascript:void(0)" ng-click="onClickDelete($event, item)">删除</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <label class="caption">
+                                分类名称
+                            </label>
+                            <input class="medium text" type="text" ng-model="editModel.title" maxlength="20"/>
+                        </div>
+
+                        <div class="row">
+                            <label class="caption">
+                                别名
+                            </label>
+                            <input class="medium text" type="text" ng-model="editModel.short_title" maxlength="10" placeholder="别名用于git commit指令指定分类用"/>
+                        </div>
+                        <div class="row control">
+                            <button class="primary default" ng-click="onClickSave()">保存</button>
+                            <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </textarea>
+
+    <!--版本管理-->
+    <textarea id="tmpl-project-version-editor">
+        <div class="modal project-version-editor">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <header>
+                    版本管理
+                </header>
+                <section>
+                    <table class="standard-table full simple-line">
+                        <thead>
+                        <tr class="left">
+                            <th>名称</th>
+                            <th>别名</th>
+                            <th>状态</th>
+                            <th class="right">操作</th>
+                        </tr>
+                        </thead>
+                        <tr ng-repeat="item in version">
+                            <td>{{item.title}}</td>
+                            <td>{{item.short_title}}</td>
+                            <td class="status {{item.status}}">{{item.status}}</td>
+                            <td class="right">
+                                <span ng-show="item.status == 'deactive'">
+                                    <a href="javascript:void(0)"
+                                       title="存档后，将不会显示在版本列表中"
+                                       ng-click="onChangeStatus($event, item, 'archive')">存档</a> |
+                                </span>
+
+                                <span ng-show="item.status == 'deactive'">
+                                    <a href="javascript:void(0)"
+                                       title="将此版本设置为活动版本"
+                                       ng-click="onChangeStatus($event, item, 'active')">激活</a> |
+                                </span>
+
+                                <a href="javascript:void(0)" ng-click="onClickEdit($event, item)">编辑</a> |
+                                <a href="javascript:void(0)" ng-click="onClickDelete($event, item)">删除</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <form class="standard-form">
+                        <div class="row">
+                            <label class="caption">
+                                版本名称
+                            </label>
+                            <input class="medium text" type="text" ng-model="editModel.title" maxlength="20"/>
+                        </div>
+
+                        <!--
+                        <div class="row">
+                            <label class="caption">
+                                版本状态
+                            </label>
+                            <div class="inline">
+                                <label>
+                                    <input type="radio" name="status" value="">
+                                </label>
+                            </div>
+                        </div>
+                        -->
+
+                        <div class="row">
+                            <label class="caption">
+                                别名
+                            </label>
+                            <input class="medium text" type="text" ng-model="editModel.short_title" maxlength="5" placeholder="用于git commit，建议英文或者数字"/>
+                        </div>
+                        <div class="row control">
+                            <button class="primary default" ng-click="onClickSave()">保存</button>
+                            <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </textarea>
+    <!--webhook管理-->
+    <textarea id="tmpl-project-webhook-editor">
+        <div class="modal project-webhook-editor">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <header>
+                    webhook管理
+                </header>
+                <section>
+                    <table class="standard-table full simple-line">
+                        <thead>
+                        <tr class="left">
+                            <th>类型</th>
+                            <th>URL</th>
+                            <th class="right">操作</th>
+                        </tr>
+                        </thead>
+                        <tr ng-repeat="item in webhook">
+                            <td>{{item.trigger}}</td>
+                            <td>{{item.url}}</td>
+                            <td class="right">
+                                <a href="javascript:void(0)" ng-click="onClickEdit($event, item)">编辑</a> |
+                                <a href="javascript:void(0)" ng-click="onClickDelete($event, item)">删除</a>
+                            </td>
+                        </tr>
+                        <tr ng-if="webhook.length == 0">
+                            <td colspan="4">暂无webhook</td>
+                        </tr>
+                    </table>
+                    <form class="standard-form">
+                        <div class="row">
+                            <label class="caption">
+                                类型
+                            </label>
+                            issue<input type="radio" name="trigger" value="issue" ng-model="editModel.trigger"/>
+                            comment<input type="radio" name="trigger" value="comment" ng-model="editModel.trigger"/>
+                            mention<input type="radio" name="trigger" value="mention" ng-model="editModel.trigger"/>
+                        </div>
+
+
+                        <div class="row">
+                            <label class="caption">
+                                URL
+                            </label>
+                            <input class="medium text" type="text" ng-model="editModel.url" placeholder=""/>
+                        </div>
+                        <div class="row control">
+                            <button class="primary default" ng-click="onClickSave()">保存</button>
+                            <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </textarea>
+</div>

@@ -1,0 +1,75 @@
+.project-view>header{
+  width: 100%;
+  background-color: #353d52;
+  .display-flex();
+  height: @project-header-height;
+  top: 0;
+
+  & when (@show-global-message){
+    top: 34px;
+  }
+
+  z-index: 100;
+  
+  >div{
+    padding-top: 8px;
+    width: 45%;
+    overflow: hidden;
+
+    &.logo{
+      width: 19%;
+      text-align: center;
+    }
+  }
+
+  .overview{
+    padding-left: 15px;
+    color: #FFF;
+
+    >*{
+      float: left;
+    }
+
+    .home .icon{
+      margin-top: 6px;
+      background-position: -40px -360px;
+      vertical-align: top;
+    }
+
+    .content >div{
+      float: left;
+      margin-left: 10px;
+      padding-top: 8px;
+      cursor: pointer;
+      label{
+        cursor: pointer;
+        vertical-align: top;
+      }
+    }
+
+    .version{
+      color: #CCCCCC;
+      margin-left: 20px;
+
+      i{
+        background-position: -120px -80px;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .open{
+    margin-top: 4px;
+    float: left;
+    background-position: -198px -717px;
+  }
+  .logo .icon{
+    background-position: -40px -40px;
+    width: 60px;
+    height: 20px;
+//    margin: 0 auto;
+    display: inline-block;
+
+  }
+
+}

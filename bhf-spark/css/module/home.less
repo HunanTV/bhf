@@ -1,0 +1,127 @@
+.home-view{
+  background: url(/images/background.jpg) no-repeat left top;
+  background-size: 100% 100%;
+
+  >header{
+    .display-flex();
+    padding: 6px 0;
+    margin-bottom: 20px;
+
+    >*{
+      .display-flex-item();
+    }
+    .logo{
+      text-align: center;
+    }
+    .logo .icon{
+      background-position: -120px -440px;
+      width: 60px;
+      height: 22px;
+    }
+
+    .toolbar{
+      >div{
+        display: inline-block;
+        cursor: pointer;
+      }
+      padding-right: 10px;
+
+      .help{
+        i{
+          background-position: -40px -320px;
+        }
+
+        .dropdown{
+          &:before{
+            left: 89px;
+          }
+
+          &:after{
+            left: 88px;
+          }
+        }
+      }
+
+      .profile{
+
+        i{
+          background-position: -80px -320px;
+        }
+
+        .dropdown{
+          &:before{
+            left: 129px;
+          }
+
+          &:after{
+            left: 128px;
+          }
+        }
+      }
+    }
+  }
+
+  .content-view{
+    h3.title{
+      color: #FFF;
+      font-size: 20px;
+    }
+
+    @media all and (min-width: 1024px) {
+      .display-flex();
+    }
+
+    height: 100%;
+    overflow: scroll;
+
+    div.half-view{
+      @media all and (min-width: 1024px) {
+        width: 100%;
+      }
+
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  }
+
+  .chart-view{
+    @media all and (min-width: 1024px) {
+      margin-bottom: 100px;
+    }
+
+    .chart-box{
+      box-sizing: border-box;
+      width: 100%;
+      background-color: #ffffff;
+      margin: 10px 0 20px 0;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .chart{
+      height: 234px;
+    }
+  }
+
+  .project-view{
+    overflow: auto;
+
+    h3.title{
+      margin-left: 10px;
+    }
+  }
+  ul.team-chart{
+    li{
+      float: right;
+      padding: 8px 16px;
+      background: #fff;
+      border:1px solid #666;
+      text-align: center;
+      cursor: pointer;
+      &.selected{
+        background: #37aeeb;
+        color: #fff;
+      }
+    }
+  }
+}

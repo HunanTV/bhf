@@ -1,0 +1,29 @@
+/*
+  issue详细信息
+  URL: /api/[project id]/issue/[issue id]
+  Method: GET
+
+  删除：
+  URL: /api/issue/[issue id]
+  Method: DELETE
+
+  修改：
+  URL: /api/issue/[issue id]
+  Method: PUT
+ */
+{
+  //issue的id
+  "id": 10,
+  //标题
+  "title": "首页搜索栏要实时展示",
+  //内容
+  "content": "详细的描述",
+  //标签，也就是分类
+  "tag": "需求",
+  //责任人
+  "owner": "兰斌",
+  //状态
+  "status": "进行中",
+  //时间
+  "timestamp": "2014-03-20 10:10:10"
+}

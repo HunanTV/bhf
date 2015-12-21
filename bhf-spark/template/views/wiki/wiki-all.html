@@ -1,0 +1,60 @@
+<div>
+    <!--wiki类型的布局，其实也是从项目中衍生出来的-->
+    <textarea id="tmpl-wiki-layout">
+        <div class="frame project-view wiki-view">
+            <global-message ng-show="false"></global-message>
+            <header-global></header-global>
+            <div class="container">
+                <!--左栏-->
+                <div class="master-panel">
+                    <!--兼容project的布局-->
+                    <div class="project-menu">
+                        <ul class="master-menu" project-menu-highlight>
+                            <li class="issue-category">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a href="/{{project | projectLink}}/issue">全部</a>
+                                        </label>
+                                    </div>
+                                    <project-category-menu data-project-id="{{project.id}}"></project-category-menu>
+                                </div>
+                            </li>
+                        </ul>
+                        <project-menu-bar></project-menu-bar>
+                    </div>
+                </div>
+
+
+                <project-salve-panel></project-salve-panel>
+            </div>
+        </div>
+    </textarea>
+
+    <!--wiki的列表-->
+    <!--为了兼容project/issue-->
+    <textarea id="tmpl-wiki-list">
+        <div class="issue-list list">
+            <h3>{{title}}<span class="badge">({{undoneIssues.pagination.recordCount}})</span></h3>
+            <div class="create">
+                <input type="text" placeholder="来，想说点什么？" autofocus issue-quick-editor ng-keydown="onKeyDown($event)" data-category="1" ng-show="showQuickEditor" data-tag="issue" />
+            </div>
+
+            <!--待办中的部分-->
+            <div class="list">
+                <ul class="details">
+                    <li ng-repeat="issue in undoneIssues.items" class="row" id="issue-list-{{issue.id}}">
+                        <issue-list-cell></issue-list-cell>
+                    </li>
+                </ul>
+
+                <div ng-show="undoneIssues.items.length == 0" class="empty">
+                    咦，这里面好像什么都没有呢
+                </div>
+            </div>
+        </div>
+    </textarea>
+
+
+
+</div>

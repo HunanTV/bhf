@@ -1,0 +1,688 @@
+//评论列表
+.issue-list{  
+  margin-bottom: @global-message-height + @project-header-height;
+  h3{
+    padding: 10px 0;
+    .upload-docx{
+      float: right;
+      width: 120px;
+      background: #37aeeb;
+      position: relative;
+      input[type="file"]{
+        cursor: pointer;
+        font-size: 50px;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        left: 0px;
+        top: 0px;
+      }
+    }
+    .stubborn{
+      float: right;
+      line-height: 25px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+  
+  .row{
+    .icon{
+//      margin-right: 10px;
+      margin-bottom: -4px;
+    }
+
+    a{
+      max-width: 70%;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 20px;
+    }
+
+
+    a:link, a:visited{
+      color: #333;
+    }
+
+    .memo{
+      color: #CCC;
+      font-size: 12.5px;
+      padding: 0 4px;
+    }
+
+    .info{
+      float: right;
+    }
+
+    &.delay{
+      a.title{
+        color: red !important;
+      }
+    }
+  }
+}
+
+.issue-details{
+  height: 100%;
+  display: box;
+  box-orient: vertical;
+  position: relative;
+  .dropdown.dropdown-tip.members{
+    width: auto;
+    margin-top: 0px;  
+    margin-left: -8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    &:hover{
+      background-color: #fff;
+    }
+    ul{
+      float: left;
+      min-width: 100px;
+      border: 0;
+      border-right: 1px solid #eee;
+      border-radius: 0;
+      box-shadow: none;
+      &:last-child{
+        border-right: 0px;
+      }
+    }
+  }
+  header{
+    height: 30px;
+    overflow: hidden;
+    .display-flex();
+    border-bottom: @normal-border;
+
+    .text-only{
+      .icon {
+        display: none;
+      }
+
+      label.display{
+        display: inline-block;
+        margin-top: 8px;
+        width: 100%;
+        padding: 0 4px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+    
+    
+
+
+    .icon.cell{
+      margin: 10px 0 0 10px;
+      width: 16px;
+      height: 16px;
+    }
+
+    label{
+      padding-bottom: 10px;
+      vertical-align: super;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .project-name{
+      .display-flex-item();
+      .icon{
+        background-position: -160px -200px;
+      }
+
+      @media all and (max-width: 1440px) {
+        display: none;
+      }
+    }
+
+    .owner{
+      .icon{
+        background-position: -200px -200px;
+      }
+      width: 80px;
+    }
+
+    .priority{
+      .icon{
+        background-position: -160px -282px;
+      }
+      width: 80px;
+    }
+
+    .assets{
+      width: 100px;
+      .icon{
+        background-position: -240px -160px;
+      }
+    }
+
+    .trash{
+      .icon{
+        background-position: -80px -360px;
+      }
+    }
+
+    .version{
+      width: 120px;
+    }
+
+    .finish-date{
+      width: 120px;
+      .icon{
+        background-position: -160px -240px;
+      }
+
+      button{
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        span{
+          vertical-align: top;
+          padding-top: 8px;
+          display: inline-block;
+          text-align: left;
+        }
+      }
+    }
+
+    div{
+      label{
+        cursor: pointer;
+      }
+
+      &:hover{
+        background-color: #e9ebf0;
+      }
+
+      cursor: pointer;
+      width: 150px;
+      border-right: @normal-border;
+    }
+
+    .date-time{
+      display: inline-block;
+      width: 80px;
+      border: none;
+      font-size: 12px;
+    }
+  }
+
+
+ 
+
+  .panel{
+    .clearfix();
+    .toolbar{
+      float: right;
+      text-align: right;
+      display: none;
+      .icon{  
+        display: block;
+        float: left;  
+        width: 14px;
+        height: 20px;
+        margin-left: 5px;
+        margin-top: 2px;
+        vertical-align: bottom;
+        &.split{ 
+          background-position: -160px -800px;
+        }
+        &.edit{ 
+          background-position: -120px -760px;
+        }
+        &.delete{ 
+          background-position: -200px -360px;
+        }
+      }
+      .tollbar-text{
+        float: left;
+        line-height: 20px;
+        margin: 0px 5px 0px 2px;
+      }
+      a{
+        padding: 5px;
+      }
+    }
+
+
+    &.issue{
+      &:hover .toolbar{
+        display: block;
+      }
+
+      .editor{
+        padding-left: 30px;
+      }
+
+      input.text{
+        width: 70%;
+      }
+
+      @media screen and (max-width: 1280px) {
+        input.text{
+          width: 320px;
+        }
+      }
+
+      .content{
+        padding: 10px 30px;
+        line-height: 30px;
+
+        ol li{
+          list-style: decimal;
+        }
+      }
+
+      div.issue-status{
+        margin-right: 6px;
+      }
+    }
+
+    &.logs{
+      .title .icon{
+        background-position: -200px -160px;
+      }
+
+      .realname{
+        margin-right: 4px;
+      }
+
+      .content{
+        color: #336699;
+      }
+
+      margin-bottom: 100px;
+    }
+
+    &.commits{
+      .title .icon{
+        background-position: -40px -240px;
+      }
+    }
+
+    &.logs, &.commits{
+      .list{
+        li{
+          padding: 4px 0;
+        }
+
+        .gray{
+          color: #CCC;
+        }
+      }
+
+      .content{
+        padding-left: 30px;
+      }
+    }
+
+    .title{
+      padding: 10px 0;
+      h3{
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 10px;
+      }
+    }
+
+    .empty{
+      color: #CCC;
+    }
+
+    padding: 20px;
+    border-bottom: @normal-border;
+  }
+
+  .issue{
+    .sub-title{
+      color: #CCC;
+      padding: 0 0 10px 30px;
+
+      span{
+        margin-right: 10px;
+      }
+
+    }
+  }
+
+  .assets{
+    .title .icon{
+      background-position: -120px -360px;
+    }
+
+    .create{
+      float: left;
+    }
+
+    .content{
+      padding: 10px 30px;
+    }
+  }
+
+  .comments{
+    .title .icon{
+      background-position: -240px -120px;
+    }
+
+    .row{
+      overflow: hidden;
+      padding: 0 30px;
+      border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
+      margin-bottom: 15px;  
+
+      &:hover{
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #efefef;
+        box-shadow: 0 1px 1px #eee;
+        background-color: #eee;
+      }
+
+      p{
+        display: block;
+      }
+
+      img{
+//        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+
+      .information{
+        color: #CCC;
+        padding: 10px 0;
+      }
+
+
+      &:hover .toolbar{
+        display: block;
+      }
+
+      &:hover{
+//        background-color: #e9ebf0;
+      }
+
+      .content p{
+        line-height: 24px;
+      }
+    }
+  }
+}
+.follow-members{
+  color: #CCC;
+  padding: 0 0 10px 30px;
+
+  span{
+    display: block;
+    float: left;
+    line-height: 19px;
+  }
+ 
+  ul.follow-members{
+    height: 20px;
+    padding-left: 0;
+    overflow: hidden;
+
+    >li{
+      float: left;
+      line-height: 22px;
+      margin-right: 2px;
+
+      &.no-follower{
+        margin-right: 10px;
+      }
+
+      .remove{
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        visibility: hidden;
+        cursor: pointer;
+        background-position: -40px -756px;
+      }
+
+      &.follow-member:hover{
+        .remove{
+          visibility: visible;
+        }
+        background: #eee;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .follow{
+    width: 40px;
+    float: left;
+  }
+
+  .follow-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    i.icon{
+      margin-top: 2px;
+      width: 20px;
+      height: 20px;
+      background-position: -80px -760px;
+    }
+  }
+}
+
+.comment-editor{
+  bottom: 0;
+  z-index: 100;
+  /*width: 100%;*/
+  position: fixed;
+  width: 45%;
+  /*overflow: hidden;*/
+  .box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+  background-color: rgba(233, 235, 240, 0.95);
+  .animation-duration(.5s);
+
+  .simple{
+    padding: 12px;
+    input{
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 16px;
+      height: 33px;
+      border: 1px solid #CCC;
+      .border-radius(4px);
+      padding: 0 10px;
+    }
+  }
+
+  .full-editor{
+    display: none;
+
+    header{
+      font-size: 16px;
+      font-weight: bold;
+      /*padding: 20px 0 0 10px;*/
+      line-height: 40px;
+      padding-left: 10px;
+    }
+  }
+
+  &.active{
+
+    .simple{
+      display: none;
+    }
+
+    .full-editor{
+      display: block;
+    }
+  }
+}
+
+.issue-status{
+  i.icon{
+    &.pause{
+      background-position: -160px -120px;
+    }
+
+    &.new, &.doing{
+      background-position: -160px -80px;
+    }
+
+    &.done{
+      background-position: -160px -160px;
+    }
+
+    &.testing{
+      background-position: -120px -640px;
+    }
+
+    &.repairing{
+      background-position: -200px -640px;
+    }
+
+    &.reviewing{
+      background-position: -160px -640px;
+    }
+
+    &.repaired{
+      background-position: -240px -640px;
+    }
+
+
+    margin: 0;
+  }
+
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+i.icon.small{
+  &.priority-4 {
+    background-position: -160px -280px;
+  }
+
+  &.priority-3 {
+    background: none;
+  }
+
+  &.priority-2{
+    background-position: -120px -280px;
+  }
+}
+
+
+
+.issue-split{
+  padding-bottom: 30px;
+  ul.issue-split{
+    margin-left: 30px;
+    li{
+      min-height: 38px;
+      float: left;
+      width: 100%;
+      .member, .finish-date, .title, .ids{
+        float: left;
+        height: 30px;
+        width: 80px;
+        line-height: 20px;
+        color: #ccc;
+      }
+      .issue-status{
+        float: left;
+      }
+      .member{
+        cursor: pointer;
+        label{
+          cursor: pointer;
+        }
+      }
+
+      .title{
+        width: auto;
+        color: #000;
+        padding: 0px 10px 0px 0px !important;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .finish-date{
+        &.finished{
+          width: 210px;
+        }
+        width: 140px;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+        }
+        span{
+          margin-left: 4px;
+        }
+      }
+      .toolbar{
+        display: none !important; 
+        float: left !important;
+      }
+      &:hover{
+        .toolbar{
+          display: block !important;
+        }
+      }
+
+      .icon{  
+        display: block;
+        float: left;  
+        width: 20px;
+        height: 20px;
+        &.owner{ 
+          background-position: -196px -196px;
+        }
+        &.date{ 
+          background-position: -196px -759px;
+        }
+      }
+
+      @media screen and (max-width: 1280px) {
+        .title{
+          max-width: 130px;
+        }
+
+        &:hover{
+          .member, .ids, .finish-date{
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  .create{
+    input{
+      display: block;
+      border: 0 solid #CCC;
+      border-bottom: 1px solid #ccc !important;
+      margin-left: 30px;
+      width: 375px;
+      height: 35px;
+      color: #ccc
+    }
+  }
+}

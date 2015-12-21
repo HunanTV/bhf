@@ -1,0 +1,83 @@
+.project-view {
+  height: 100%;
+  .container {
+    height: 100%;
+    .display-flex();
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+.wiki-view{
+  .project-menu .sub-menu{
+    margin-left: 0;
+
+    .badge{
+      display: none;
+    }
+  }
+}
+
+
+.project-list-panel {
+  ul.details{
+    margin-bottom: 260px;
+  }
+
+  .row {
+    &:hover{
+      a.remove{
+        visibility: visible;
+      }
+    }
+
+    .email{
+      color: #CCC;
+      margin-left: 20px;
+    }
+
+    .control{
+      float: right;
+      vertical-align: top;
+    }
+
+    a.remove{
+      visibility: hidden;
+      cursor: pointer;
+      color: @link-color;
+    }
+    a.invite{
+      cursor: pointer;
+      color: @link-color;
+      float: right;
+      margin-left: 10px;
+    }
+
+    .role{
+      display: inline-block;
+      cursor: pointer;
+      vertical-align: baseline;
+      margin-left: 10px;
+      position: relative;
+      .icon{
+        vertical-align: top;
+        background-position:-115px -393px;
+      }
+
+      .dropdown-tip{
+        left: -80px;
+      }
+    }
+  }
+}
+
+.project-version-editor{
+  .status.active{
+    color: #ff56a5;
+  }
+
+  .status.archive{
+    color: #CCC;
+  }
+}

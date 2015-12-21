@@ -1,0 +1,440 @@
+<div>
+    <textarea id="tmpl-project-menu">
+        <div class="project-menu">
+            <ul class="master-menu" project-menu-highlight>
+                <li class="myself">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/issue/myself">我相关的任务</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="discussion">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/discussion">讨论</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="test">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/test">测试专区</a>
+                        </label>
+                        <span class="badge small gray stat">{{testStat.undone || 0}}/{{testStat.all || 0}}</span>
+                    </div>
+                </li>
+                <li class="issue-category">
+                    <div class="inner">
+                        <div class="title">
+                            <i class="icon small"></i>
+                            <label>
+                                <a href="/{{baseLink}}/issue">全部任务</a>
+                            </label>
+                            <!--<button class="default setting"></button>-->
+                        </div>
+                        <project-category-menu data-project-id="{{project.id}}"></project-category-menu>
+                    </div>
+                </li>
+                <li class="document">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/document">文档</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="asset">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/assets">素材</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="member">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/member">成员</a>
+                        </label>
+                        <a class="invite" href="javascript:void(0)" title="邀请请成员加入此项目" ng-click="onClickInvite($event)">邀请新成员</a>
+                    </div>
+                </li>
+                <li class="commit">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/commit">Commit</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="gitlab">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/gitlab">Gitlab</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="report" ng-show="project.role == 'l'">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/weekly-report">项目周报</a>
+                        </label>
+                    </div>
+                </li>
+                <!--
+                <li class="version">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/version">版本</a>
+                        </label>
+                    </div>
+                </li>
+                -->
+                <li class="stat" ng-hide="true">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/stat">统计</a>
+                        </label>
+                    </div>
+                </li>
+                <li class="plugin" ng-hide="true">
+                    <div class="inner">
+                        <i class="icon small"></i>
+                        <label>
+                            <a href="/{{baseLink}}/plugin">插件</a>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+
+            <project-menu-bar></project-menu-bar>
+            <invite-member></invite-member>
+        </div>
+    </textarea>
+
+    <!--项目的menu bar-->
+    <textarea id="tmpl-project-menu-bar">
+        <div>
+            <div class="menu-bar">
+                <!--
+                <div class="create item">
+                    <i class="icon"></i>
+                    <span>新增</span>
+                </div>
+                -->
+
+                <div class="setting item" dropdown data-name="project:menu:manage">
+                    <i class="icon"></i>
+                    <span>管理工具</span>
+                    <div class="dropdown dropdown-tip dropdown-up">
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a data-value="project"><span>项目设置</span></a>
+                            </li>
+                            <li>
+                                <a data-value="version"><span>版本</span></a>
+                            </li>
+                            <li>
+                                <a data-value="category"><span>任务分类</span></a>
+                            </li>
+                            <li>
+                                <a data-value="webhook"><span>Webhook</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <project-editor></project-editor>
+            <issue-category-editor></issue-category-editor>
+            <project-version-editor></project-version-editor>
+            <project-webhook-editor></project-webhook-editor>
+        </div>
+    </textarea>
+
+    <!--项目分类的列表-->
+    <textarea id="tmpl-project-menu-category">
+        <ul class="sub-menu">
+            <li ng-repeat="item in projectCategory">
+                <a href="/{{item | projectLink: 'normal'}}/category/{{item.id}}/issue?title={{item.title}}" class="text-overflow">{{item.title}}</a>
+                <span class="badge small gray stat">{{item.issue_undone_total}}/{{item.issue_total}}</span>
+            </li>
+        </ul>
+    </textarea>
+
+    <!--团队分类的列表-->
+    <textarea id="tmpl-team-menu-category">
+        <ul class="sub-menu">
+            <li ng-repeat="item in projectCategory">
+                <a href="/{{item | projectLink: 'normal'}}/category/{{item.id}}/issue?title={{item.title}}" class="text-overflow">{{item.title}}</a>
+                <span class="badge small gray stat">{{item.issue_undone_total}}/{{item.issue_total}}</span>
+            </li>
+        </ul>
+    </textarea>
+
+<!--     <textarea id="tmpl-project-header">
+        <header>
+            <div class="overview">
+                <a href="/" class="home">
+                    <i class="icon small"></i>
+                </a>
+                <div class="content" ng-show="project">
+                    <div class="title">
+                        <label>{{project.title}}</label>
+                        <i class="small icon"></i>
+                    </div>
+                    <div class="spliter">
+                        ->
+                    </div>
+                    <div class="version" dropdown data-name="project:version" data-text-container="label.display" data-selected="{{projectVersion}}" data-exclude-value="-1">
+                        <label class="display">{{projectVersion | currentProjectVersion}}</label>
+                        <i class="small icon"></i>
+                        <project-version-dropdown data-show-more="true"></project-version-dropdown>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <i class="icon"></i>
+            </div>
+            <header-toolbar></header-toolbar>
+        </header>
+    </textarea> -->
+
+    <!--项目成员的下拉-->
+    <textarea id="tmpl-project-member-dropdown">
+        <div class="dropdown dropdown-tip members">
+            <ul class="dropdown-menu" ng-repeat="array in items">
+                <!-- <li><a data-value="-1">未指定</a></li> -->
+                <li ng-repeat="item in array">
+                    <a data-value="{{item.member_id}}">
+                        {{item.realname}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--项目分类的dropdown-->
+    <textarea id="tmpl-project-category-dropdown">
+        <div class="dropdown dropdown-tip">
+            <ul class="dropdown-menu">
+                <li ng-repeat="item in projectCategory">
+                    <a data-value="{{item.id}}"><span>{{item.title}}</span></a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--项目版本的dropdown-->
+    <textarea id="tmpl-project-versions-dropdown">
+        <div class="dropdown dropdown-tip">
+            <ul class="dropdown-menu">
+                <li ng-repeat="item in projectVersion">
+                    <a data-value="{{item.id}}"><span>{{item.title}}</span></a>
+                </li>
+                <li ng-show="showMore">
+                    <a data-value="all"><span>全部版本</span></a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--项目列表的磁贴-->
+    <textarea id="tmpl-project-tiles">
+        <ul class="project-tiles" project-tile-resize>
+            <li class="create tile" ng-click="onClickCreate()">
+                <i class="icon"></i>
+            </li>
+
+            <li class="tile" ng-repeat="project in projects.items" ng-click="onClickTile($event, project)" ng-class="{true: 'favorite'}[project.favorite > 0]">
+               <div class="title">
+                   {{project.title}}
+                   <i class="icon small favorite"></i>
+               </div>
+
+               <div class="processing" project-processing data-dom-id="project-tile-{{project.id}}" id="project-tile-{{project.id}}">
+                <!--
+                <div class="circle">
+                    <span class="text">{{project.finished_rate | number:0}}%</span>
+                </div>
+                -->
+               </div>
+
+               <div class="tile-toolbar">
+                   <div class="description">{{project.description || '无项目说明' | limitTo: 40}}</div>
+                   <ul class="menu">
+                       <li class="sub-menu favorite">
+                           <button class="default" ng-click="onClickFavorite($event, project)">
+                               <i class="small icon"></i>
+                               <span ng-show="project.favorite == 0">收藏</span>
+                               <span ng-show="project.favorite > 0">取消</span>
+                           </button>
+                       </li>
+                       <li class="sub-menu edit" ng-show="project.role == 'l'">
+                           <button class="default" ng-click="onClickEdit($event, project)">
+                            <i class="small icon"></i>
+                               编辑
+                           </button>
+                       </li>
+                       <li class="sub-menu remove" ng-show="project.role == 'l'">
+                           <button class="default" ng-click="onClickDelete($event, project)">
+                               <i class="small icon"></i>
+                               删除
+                           </button>
+                       </li>
+                   </ul>
+               </div>
+            </li>
+        </ul>
+    </textarea>
+
+    <!--项目布局-->
+    <textarea id="tmpl-project-layout">
+        <div class="frame project-view">
+            <global-message ng-show="false"></global-message>
+            <header-global data-project="project" data-projectVersion="{{projectVersion}}"></header-global>
+            <div class="container">
+                <!--左栏-->
+                <div class="master-panel">
+                    <project-menu></project-menu>
+                </div>
+                <project-salve-panel></project-salve-panel>
+<!--            <div class="salve-panel">
+                    <div class="list-panel" ui-view="listPanel" ng-style="leftViewStyle"></div>
+                    
+                    <div class="details-panel full" ui-view="detailsPanel" ng-style="rightViewStyle"></div>
+                </div> -->
+            </div>
+        </div>
+    </textarea>
+
+    <!--项目布局-->
+    <textarea id="tmpl-project-salve-panel">
+        <div class="salve-panel">
+            <div class="list-panel" ui-view="listPanel" ng-style="leftViewStyle"></div>
+         
+            <div class="details-panel full" ui-view="detailsPanel" ng-style="rightViewStyle"></div>
+        </div>
+    </textarea>
+
+
+
+    <!-- 我的任务 -->
+    <textarea id="tmpl-my-project-layout">
+        <div class="frame project-view team-view portal">
+            <global-message ng-show="false"></global-message>
+            <header-global></header-global>
+            <div class="container">
+                <!--左栏-->
+                <div class="master-panel">
+                    <!--兼容project的布局-->
+                    <div class="project-menu">
+                        <ul class="master-menu" project-menu-highlight>
+                            <li class="issue-category">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a href="/myproject/all/issue/myself?title=我的所有任务">所有任务</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="issue-category">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a>我的项目</a>
+                                        </label>
+                                    </div>
+                                    <div ng-show="projects.items.length == 0" class="empty ng-binding">
+                                        尚未参加任何项目
+                                    </div>
+                                    <my-project-menu></my-project-menu>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <project-salve-panel></project-salve-panel>
+            </div>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-my-project-menu">
+        <ul class="sub-menu">
+            <li ng-repeat="item in projects.items">
+                <a title="{{item.title}}" href="/myproject/{{item.id}}/issue/myself?title={{item.title}}" class="text-overflow">
+                    {{item.title}}
+                </a>
+                <span class="badge small gray stat">{{item.undone_task_total}}/{{item.task_total}}</span>
+            </li>
+        </ul>
+    </textarea>
+
+
+    <!-- 我的关注 -->
+    <textarea id="tmpl-my-follow-layout">
+        <div class="frame project-view team-view">
+            <global-message ng-show="false"></global-message>
+            <header-global></header-global>
+            <div class="container">
+                <!--左栏-->
+                <div class="master-panel">
+                    <!--兼容project的布局-->
+                    <div class="project-menu">
+                        <ul class="master-menu" project-menu-highlight>
+                            <li class="issue-category">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a href="/myfollow/all/issue/follow?title=我的关注">所有关注</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="issue-category">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a>我的项目</a>
+                                        </label>
+                                    </div>
+                                    <div ng-show="projects.items.length == 0" class="empty ng-binding">
+                                        尚未参加任何项目
+                                    </div>
+                                    <my-follow-menu></my-follow-menu>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <project-salve-panel></project-salve-panel>
+            </div>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-my-follow-menu">
+        <ul class="sub-menu">
+            <li ng-repeat="item in projects.items">
+                <a class="text-overflow wide" href="/myfollow/{{item.id}}/issue/follow?title={{item.title}}" class="text-overflow">{{item.title}}</a>
+            </li>
+        </ul>
+    </textarea>
+
+</div>
+
+
+
+
+
+
+

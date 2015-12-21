@@ -1,0 +1,60 @@
+.report-weekly-print{
+  width: 842px;
+  margin: 40px auto;
+
+  header{
+    text-align: center;
+
+    h3{
+      font-size: 20px;
+    }
+
+    em{
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      color: #CCC;
+    }
+  }
+
+  .title{
+    padding: 10px 0;
+  }
+
+  .somebody{
+    .display-flex();
+    margin-bottom: 10px;
+
+    .member{
+      width: 80px;
+      padding-top: 4px;
+    }
+
+    .info{
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .tasks{
+      li{
+        padding: 4px 0;
+      }
+    }
+
+    a, a:hover, a:link, a:visited{
+      color: @text-color;
+      text-decoration: none;
+    }
+  }
+
+  .plain.gray{
+    color: #CCC;
+  }
+
+  footer{
+    text-align: right;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 2px solid #CCC;
+  }
+}

@@ -1,0 +1,169 @@
+<div>
+    <!--缩略图列表-->
+    <textarea id="tmpl-asset-thumbnails">
+        <ul class="asset-thumbnails">
+            <li ng-repeat="asset in assets.items" title="{{asset.original_name}}">
+                <div ng-class="asset.url | getAssetThumbnailClass" style="background-image: url({{asset | assetThumbnail}})">
+                </div>
+                <div class="description">
+                    <p class="filename">
+                        {{asset.original_name}}
+                    </p>
+                    <p class="secondary">
+                        {{asset.timestamp | date: 'MM月dd日 hh:mm'}}
+                    </p>
+                    <p class="secondary">
+                        {{asset.realname}}/{{asset.file_size | friendlyFileSize}}
+                    </p>
+                </div>
+                <div class="overlay">
+                    <ul>
+                        <li ng-show="asset.url | assetIsPicture">
+                            <a href="{{asset | assetLink}}" ng-click="onClickPreviewPicture($event, asset)">预览</a>
+                        </li>
+
+                        <li ng-show="asset.url | assetIsBundle">
+                            <a href="javascript:void(0)" ng-click="onClickPreviewBundle($event, asset)">预览</a>
+                        </li>
+
+                  <!--       <li ng-show="asset.url | assetIsDocx">
+                            <a href="javascript:void(0)" ng-click="onClickCreateIssues($event, asset)">发布</a>
+                        </li> -->
+
+                        <li><a href="{{asset | assetLink:true}}" target="_blank">下载</a></li>
+                        <li><a href="javascript:void(0)" ng-click="onClickRemove($event, asset)">删除</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="create asset-uploader" upload-assets>
+                    <input type="file" multiple />
+                    <div class="mask">
+                        <div class="progress">0%</div>
+                        <div class="percent-bar">
+                            <div class="percent"></div>
+                        </div>
+                        <div>上传中</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </textarea>
+
+    <!--素材列表-->
+    <textarea id="tmpl-assets-list">
+        <div class="list">
+            <header>
+                <h3>素材库({{assets.pagination.recordCount}})</h3>
+            </header>
+            <ul class="details">
+                <li ng-repeat="item in assets.items" class="row">
+                    <a href="/{{item | projectLink: 'normal'}}/assets/previewer/{{item.id}}"
+                       class="title"
+                       ng-bind-html="item.original_name | highlightKeyword: condition.keyword | unsafe">
+                    </a>
+
+                    <div class="info">
+                        <span class="memo">{{item.file_size | friendlyFileSize}}</span>
+                        <span class="memo">{{item.creator_name}}</span>
+                        <span class="memo">{{item.timestamp | date}}</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div ng-show="assets.pagination.recordCount == 0" class="empty">
+                没有任何素材哦
+            </div>
+
+            <pagination ng-hide="assets.pagination.pageCount<2" data-uuid="asset_pagination" data-paginations={{assets.pagination}}></pagination>
+        </div>
+    </textarea>
+
+    <!--图片素材的预览-->
+    <textarea id="tmpl-assets-details">
+        <div class="inner-view">
+            <asset-unwind-previewer ng-show="assetIsBundle"></asset-unwind-previewer>
+            <asset-file-previewer ng-show="!assetIsBundle" data-type="{{assetType}}" data-asset-id="{{asset.id}}" data-project-id="{{asset.project_id}}"></asset-file-previewer>
+        </div>
+    </textarea>
+
+    <!--单个文件预览-->
+    <textarea id="tmpl-asset-file-previewer">
+        <div class="asset-previewer">
+            <div class="previewer">
+                <asset-previewer-header></asset-previewer-header>
+
+                <!--无法预览的-->
+                <div class="download" ng-show="assetType == 'other'">
+                    很抱歉，此文件无法预览
+                </div>
+
+                <!--代码-->
+                <pre ng-show="assetType == 'code'">
+                    <code ng-bind="contentHTML"></code>
+                </pre>
+
+                <div class="image" ng-show="assetType == 'image'">
+                    <a ng-href="{{assetUrl}}" target="-_blank"><img ng-src="{{assetUrl}}" /></a>
+                </div>
+
+                <!--markdown的文件-->
+                <div class="markdown markdown-body" ng-bind-html="markdownContent | unsafe" ng-show="assetType == 'markdown'"></div>
+            </div>
+        </div>
+    </textarea>
+
+    <!--展开压缩文件-->
+    <textarea id="tmpl-asset-unwind-previewer">
+        <div class="asset-unwind-container">
+            <asset-previewer-header></asset-previewer-header>
+            <asset-bundle-unwind></asset-bundle-unwind>
+        </div>
+    </textarea>
+
+    <!--<textarea id="tmpl-assets-"-->
+
+   <textarea id="tmpl-assets-unwind">
+       <div class="full asset-unwind">
+           <nav>
+               <a href="javascript:void(0)" ng-click="onClickNav($event, -1)">根目录</a>
+               <span ng-repeat="item in subdir">->
+                   <a href="javascript:void(0)" ng-click="onClickNav($event, $index)">{{item}}</a>
+               </span>
+           </nav>
+
+           <ul class="list">
+               <li class="title">
+                   <span class="filename">文件名</span>
+                   <span class="size">文件大小</span>
+                   <span class="size">修改日期</span>
+               </li>
+               <li ng-repeat="asset in unwind">
+                   <span class="filename">
+                       <img ng-src="/images/file-extension-small/{{asset.original_name | extensionImage: asset.is_dir}}.png" />
+
+                       <a href="javascript:void(0)" ng-click="onClickAsset($event, asset)" ng-show="asset.is_dir">{{asset.original_name}}</a>
+                       <a href="{{asset.url}}" ng-show="!asset.is_dir" target="_blank">{{asset.original_name}}</a>
+                       <a href="{{asset.url}}&download=true" target="_blank" ng-show="!asset.is_dir" class="download">下载</a>
+                   </span>
+                   <span class="size">{{asset.file_size | friendlyFileSize}}</span>
+                   <span class="mtime">{{asset.timestamp | date: 'medium'}}</span>
+               </li>
+           </ul>
+       </div>
+   </textarea>
+
+   <!--文件预览的header部分-->
+   <textarea id="tmpl-asset-previewer-header">
+       <header class="asset-previewer-header">
+           <h3>{{asset.original_name}}</h3>
+           <p>
+               <span>文件大小：{{asset.file_size | friendlyFileSize}}</span>
+               |
+               <span>上传日期：{{asset.timestamp | date:'medium'}}</span>
+               |
+               <a ng-href="{{asset | assetLink:true}}" target="_blank">下载</a>
+           </p>
+       </header>
+   </textarea>
+</div>

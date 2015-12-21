@@ -1,0 +1,232 @@
+<div>
+
+    <!--报表页面-->
+    <textarea id="tmpl-report-layout">
+        <div class="frame project-view team-view">
+            <global-message ng-show="false"></global-message>
+            <header-global></header-global>
+            <div class="container">
+                <!--左栏-->
+                <div class="master-panel">
+                    <!--兼容project的布局-->
+                    <div class="project-menu">
+                        <ul class="master-menu" project-menu-highlight>
+                            <li class="issue-category">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a href="/report/0/weekly-report?title=我的周报">我的周报</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="issue-category" ng-show="teamCategory.length > 0">
+                                <div class="inner">
+                                    <div class="title">
+                                        <label>
+                                            <a>团队周报</a>
+                                        </label>
+                                    </div>
+                                    <report-team-category-menu></report-team-category-menu>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <project-salve-panel></project-salve-panel>
+            </div>
+        </div>
+    </textarea>
+
+
+    <!--团队列表-->
+    <textarea id="tmpl-report-team-menu-category">
+        <ul class="sub-menu">
+            <li ng-repeat="item in teamCategory" ng-if="item.status==1">
+                <a href="/report/{{item.team_id}}/weekly-report?title={{item.name}}" class="text-overflow">{{item.name}}</a>
+            </li>
+        </ul>
+    </textarea>
+
+
+    <!--周报列表-->
+    <textarea id="tmpl-report-weekly-list">
+        <div class="list">
+            <header>
+                <h3>{{title}}<button class="primary default" style="float:right;margin-bottom:5px;" ng-click="createReport()" ng-if="title=='我的周报'">添加</button></h3>
+            </header>
+
+            <ul class="details">
+                <li class="row" ng-repeat="week in weeks">
+                    <a  class="title" href="/{{null | projectLink: 'normal'}}/weekly-report/{{week.start}}~{{week.end}}?title={{teamName}}">
+                        {{week.start|date: 'yyyy年第ww周'}}
+                    </a>
+
+                    <div class="info">
+                        <span class="memo">{{week.start | date}} 至 {{week.end | date}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <report-create></report-create>
+    </textarea>
+
+    <!--周报明细中，每个用户的周报数据-->
+    <textarea id="tmpl-report-weekly-details-member">
+        <div>
+            <div class="somebody" ng-repeat="item in source">
+                <div class="member">{{item.member.realname || item.member.username}}({{item.issue.length+item.others.length}})</div>
+                <ul class="tasks">
+                    <li ng-repeat="issue in item.issue">
+                        <a href="/project/{{issue.project_id}}/issue/{{issue.id}}"><span ng-if="issue.issue_title">{{issue.issue_title}}--></span>{{issue.title}} </a>
+                        <div class="info">
+                            <span class="plain gray">{{(issue.finish_time || issue.timestamp) | date: 'EEEE'}}</span>
+                            <span class="plain gray">{{issue.project_name}}</span>
+                        </div>
+                    </li>
+                    <li ng-show="item.others.length>0 && item.issue.length>0" class="devide"></li>
+                    <li ng-repeat="other in item.others">
+                        {{other}}
+                    </li>
+                </ul>
+            </div>
+            <div ng-show="source.length == 0" class="somebody">暂无数据</div>
+        </div>
+    </textarea>
+
+    <!--显示在周报右边的周报详细-->
+    <textarea id="tmpl-report-weekly-details">
+        <div class="weekly-report-details inner-view">
+            <header>
+                <div class="title">
+                    {{start_time | date: 'yyyy年第ww周'}}周报
+                    <em>{{start_time | date: 'yyyy-MM-dd'}} 至 {{end_time | date: 'yyyy-MM-dd'}}</em>
+                </div>
+                <div class="print">
+                    <i class="icon small"></i>
+                    <a href="/report/weekly.html?start_time={{start_time}}&end_time={{end_time}}{{printExtraUrl}}" target="_blank">打印版</a>
+                </div>
+            </header>
+            
+            <report-weekly-details-content></report-weekly-details-content>
+        </div>
+    </textarea>
+
+    <!--周报打印版-->
+    <textarea id="tmpl-report-weekly-details-print">
+        <div class="report-weekly-print">
+            <header>
+                <h3>
+                    {{start_time | date: 'yyyy年第ww周'}}周报
+                    <em>{{start_time | date: 'yyyy-MM-dd'}} 至 {{end_time | date: 'yyyy-MM-dd'}}</em>
+                </h3>
+            </header>
+            <report-weekly-details-content></report-weekly-details-content>
+            <footer>
+                本报表由BHF自动生成
+            </footer>
+        </div>
+    </textarea>
+
+    <!--周报的详细内容区-->
+    <textarea id="tmpl-report-weekly-details-content">
+        <div>
+            <!--完成任务-->
+            <section class="done report-view">
+                <div class="title">
+                    <i class="icon small"></i>
+                    <h3>本周完成任务</h3>
+                </div>
+
+                <report-weekly-details-member data-source="report.finished"></report-weekly-details-member>
+            </section>
+
+            <!--未完成任务-->
+            <section class="undone report-view">
+                <div class="title">
+                    <i class="icon small"></i>
+                    <h3>本周未完成任务</h3>
+                </div>
+
+                <report-weekly-details-member data-source="report.unfinished"></report-weekly-details-member>
+            </section>
+
+            <!--本周无任务和周报记录-->
+            <section class="lazybone report-view" ng-hide="true">
+                <div class="title">
+                    <i class="icon small"></i>
+                    <h3>本周无任务和周报记录(共{{report.lazybones.length}}人)</h3>
+                </div>
+
+                <ul class="member-list">
+                    <li ng-repeat="member in report.lazybones">
+                        <div class="avatar">
+                            {{member.realname | lastName}}
+                        </div>
+                        <label>{{member.realname}}</label>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-index-team-finished-chart">
+        <div ng-if="teams.length > 0">
+            <div class="chart-box">
+                <h3>【{{current_team.name}}】年度开发者完成任务Top 5</h3>
+                <!--<member-finished-total-chart></member-finished-total-chart>-->
+                <div class="chart" issue-finished-total-chart data-name="team" data-id="{{current_team.team_id}}" data-flag="team"></div>
+            </div>
+            <ul class="team-chart" ng-show="teams.length > 1">
+                <li ng-repeat="team in teams" ng-click="teamClick(team)" ng-class="{true: 'selected', false: ''}[(team == current_team)]">
+                    {{team.name}}
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+
+    <textarea id="tmpl-report-create">
+        <div class="modal">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <div class="simple-tab" simple-tab="" data-active-index="0">
+                    <div class="nav title" data-field="nav">
+                        <span>添加周报</span>
+                    </div>
+                </div>
+                <div class="content" data-field="content">
+                    <div class="panel">
+                        <div class="standard-form">
+                            <div class="row">
+                                <label class="caption">
+                                    时间：
+                                </label>
+                                <select class="width" ng-change="dropDownChange()" ng-model="profile.time"
+                                 ng-options="week.start as ((week.start|date: 'yyyy年第ww周')+'('+(week.start|date: 'MM月dd日')+'至'+(week.end|date: 'MM月dd日')+')') for week in weekList"></select>
+                            </div>
+                            <div class="row">
+                                <label class="caption float">
+                                    内容：
+                                </label>
+                                &lt;textarea ng-model="profile.content"&gt;&lt;/textarea&gt;
+                            </div>
+
+                            <div class="row control">
+                                <button class="primary default" ng-click="onClickSave()">保存</button>
+                                <button class="cancel default" ng-click="onClickCancel()">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </textarea>
+</div>
+
+
+
+
+
+
+

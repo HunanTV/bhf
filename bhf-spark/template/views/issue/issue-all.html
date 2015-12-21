@@ -1,0 +1,368 @@
+<div>
+    <!--单个issue-->
+    <textarea id="tmpl-issue-list-cell">
+        <div class="row" ng-class="getDelayClass(issue)" ng-click="onClickIssue($event, issue)">
+            <div class="issue-status" data-selected="{{issue.status}}" data-name="issue:status" ng-click="onClickStatus($event, issue)">
+                <i class="icon small" ng-class="issue.status" ng-click="clickStatus()"></i>
+            </div>
+            <i class="priority" ng-class="'priority-' + issue.priority" ng-click="clickPriority()"></i>
+            <a class="title"
+                    ng-bind-html="issue.title | removeCommand | removeTag | highlightKeyword: condition.keyword | unsafe"></a>
+            <span class="issue-id memo">#{{issue.id}}</span>
+            <div class="info">
+                <span class="member memo">{{issue.owner_name}}</span>
+                <span class="date memo" ng-show="issue.status == 'done'" title="实际完成时间">{{issue.finish_time | date}}</span>
+                <span class="date memo" ng-show="issue.status != 'done'" title="计划完成时间">{{issue.plan_finish_time | date}}</span>
+            </div>
+        </div>
+    </textarea>
+
+    <!--列表显示issue-->
+    <textarea id="tmpl-issue-list">
+        <div class="issue-list list" issue-status-dropdown-action style="position: relative;">
+            <h3>{{title}}
+                <button issue-form-button class='primary default' style="float:right;margin-bottom:5px;" ng-if='project.flag==2&&showQuickEditor' ng-click='createForm()'>申请</button>
+                <button issue-form-button upload-docx class='primary default upload-docx' style="float:right;margin-bottom:5px;" ng-if='project.flag==0&&showQuickEditor'>
+                    批量创建
+                    <input type="file" />
+                </button>
+                <a href="/wiki/17/category/89/issue/6902"  ng-if='project.flag==0&&showQuickEditor' class="stubborn">如何批量创建任务？</a>
+            </h3>
+            <div class="create" ng-show="project.flag!=2&&!myproject">
+                <input type="text" placeholder="请输入您将要创建的任务，支持指令" autofocus issue-quick-editor ng-keydown="onKeyDown($event)" data-category="1" ng-show="showQuickEditor" data-tag="issue" />
+                <div ng-show="!showQuickEditor" class="empty">
+                    您需要切换到具体任务分类下才能创建任务，<a href="/wiki/17/category/89/issue/2956" class="stubborn">这是什么意思？</a>
+                </div>
+            </div>
+
+            <div>
+                <!--待办中的部分-->
+                <issue-plain-list data-source="{{undoneIssues}}" data-title="未完成"></issue-plain-list>
+                <issue-plain-list
+                        data-source="{{doneIssues}}"
+                        data-title="已经完成"
+                        data-show-details="false" data-need-pagination="true" data-uuid="done_issues"></issue-plain-list>
+            </div>
+
+            <issue-status-dropdown></issue-status-dropdown>
+
+            <issue-form-modal></issue-form-modal>
+
+
+        </div>
+    </textarea>
+
+    <!--issue的编辑器-->
+    <textarea id="tmpl-issue-editor">
+        <div>
+            <div class="title">
+                <input type="text" />
+            </div>
+            <editor></editor>
+            <div class="control">
+                <label class="always-top" ng-show="showAlwaysTop">
+                    <input type="checkbox" />
+                    置顶
+                </label>
+                <button>保存</button>
+            </div>
+        </div>
+    </textarea>
+
+    <!--讨论列表-->
+    <textarea id="tmpl-discussion-list">
+        <div class="list issue-list">
+            <header>
+                <h3>讨论</h3>
+            </header>
+
+            <div class="create">
+                <input type="text" placeholder="你想说点什么？" autofocus issue-quick-editor ng-keydown="onKeyDown($event)" data-category="1" data-tag="discussion"/>
+            </div>
+
+            <ul class="details">
+                <li ng-repeat="item in discussion.items" class="row" ng-class="{'active': (item | isActiveIssue)}">
+                    <a href="/{{item | projectLink: 'normal'}}/discussion/{{item.id}}">
+                        <span class="badge gray small">{{item.comment_count}}</span>
+
+                        <span class="title" ng-bind-html="item.title | highlightKeyword: condition.keyword | unsafe"></span>
+                    </a>
+                    <div class="info">
+                        <span class="member memo">{{item.owner_name}}</span>
+                        <span class="date memo">{{item.timestamp | date}}</span>
+                    </div>
+                    <p class="summary" ng-show="item.content">
+                        {{item.content | rawText | limitTo: 40}}
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--优先级-->
+    <textarea id="tmpl-issue-priority-dropdown">
+        <div class="dropdown dropdown-tip priority">
+            <ul class="dropdown-menu">
+                <li>
+                    <a data-value="2"><i class="icon small priority-2"></i><span>低</span></a>
+                </li>
+                <li>
+                    <a data-value="3"><i class="icon small priority-3"></i><span>一般</span></a>
+                </li>
+                <li>
+                    <a data-value="4"><i class="icon small priority-4"></i><span>紧急</span></a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--任务状态-->
+    <textarea id="tmpl-issue-status-dropdown">
+        <div class="dropdown dropdown-tip status issue-status">
+            <ul class="dropdown-menu">
+                <li data-status="doing">
+                    <a data-value="doing"><i class="icon small doing"></i><span>进行中</span></a>
+                </li>
+                <li data-status="pause">
+                    <a data-value="pause"><i class="icon small pause"></i><span>暂停</span></a>
+                </li>
+                <li data-status="repairing">
+                    <a data-value="repairing"><i class="icon small repairing"></i><span>需要修改</span></a>
+                </li>
+                <li data-status="repaired">
+                    <a data-value="repaired"><i class="icon small repaired"></i><span>修复完成</span></a>
+                </li>
+                <li data-status="reviewing">
+                    <a data-value="reviewing"><i class="icon small reviewing"></i><span>测试已审</span></a>
+                </li>
+                <li data-status="reviewed">
+                    <a data-value="done"><i class="icon small done"></i><span>产品已审</span></a>
+                </li>
+                <li data-status="done">
+                    <a data-value="done"><i class="icon small done"></i><span>已完成</span></a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <!--操作日志-->
+    <textarea id="tmpl-issue-log">
+        <ul class="list">
+            <li ng-repeat="log in logs" title="{{log.timestamp | date: 'yyyy-MM-dd hh:mm'}}">
+                <span class="realname gray">{{log.realname}}</span>
+                在
+                <span class="timestamp gray">{{log.timestamp | timeAgo}}</span>
+                <span class="content">{{log.content}}</span>
+            </li>
+        </ul>
+    </textarea>
+
+    <!--文档列表-->
+    <textarea id="tmpl-document-list">
+        <div class="list">
+            <header>
+                <h3>文档</h3>
+            </header>
+
+            <div class="create">
+                <input type="text" placeholder="想要新建文档吗？输入文档标题后回车" autofocus issue-quick-editor ng-keydown="onKeyDown($event)" data-category="1" data-tag="document" />
+            </div>
+
+            <div ng-show="document.pagination.recordCount == 0" class="empty">
+                还没有任何文档哦，快创建一个吧
+            </div>
+
+            <ul class="details">
+                <li ng-repeat="item in document.items" class="row" ng-class="{'active': (item | isActiveIssue)}">
+                    <a href="/{{item | projectLink: 'normal'}}/document/{{item.id}}">
+                        <span class="title">{{item.title}}</span>
+                    </a>
+
+                    <div class="info">
+                        <span class="member memo">{{item.owner_name}}</span>
+                        <span class="date memo">{{item.timestamp | date}}</span>
+                    </div>
+
+                    <p class="summary" ng-show="item.content">
+                        {{item.content | rawText}}
+                    </p>
+                </li>
+            </ul>
+
+            <pagination ng-hide="document.pagination.pageCount<2" data-uuid="document_pagination" data-paginations={{document.pagination}}></pagination>
+        </div>
+    </textarea>
+
+    <!--任务类型的选择-->
+    <textarea id="tmpl-issue-tag-dropdown">
+        <div class="dropdown dropdown-tip tag">
+            <ul class="dropdown-menu">
+                <li>
+                    <a data-value="issue"><span>任务</span></a>
+                </li>
+                <li>
+                    <a data-value="document"><span>文档</span></a>
+                </li>
+                <li>
+                    <a data-value="discussion"><span>讨论</span></a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+
+    <!--任务列表-->
+    <textarea id="tmpl-issue-plain-list">
+        <div class="list">
+            <header>
+                <h3>
+                    {{title}}
+                    <span class="badge">({{source.pagination.recordCount}})</span>
+                </h3>
+                <div class="toggle" ng-class="{'collapse': showDetails}" ng-click="onClickToggle()">
+                    <i class="icon small"></i>
+                </div>
+            </header>
+            <ul class="details" ng-hide="showDetails">
+                <li ng-repeat="issue in source.items" class="row" id="issue-list-{{issue.id}}" ng-class="{'active': (issue | isActiveIssue)}">
+                    <issue-list-cell></issue-list-cell>
+                </li>
+            </ul>
+            <div ng-show="source.items.length == 0" class="empty">
+                {{emptyMemo || '太棒了，所有的任务都已经完成了'}}
+            </div>
+            <pagination ng-if="needPagination" ng-hide="showDetails||source.pagination.pageCount<2" data-uuid="{{uuid}}" data-paginations={{source.pagination}}></pagination>
+        </div>
+    </textarea>
+
+    <!--测试列表-->
+    <textarea id="tmpl-test-list">
+        <div class="issue-list list" issue-status-dropdown-action style="position: relative">
+            <h3>测试任务</h3>
+            <div class="create">
+                <input type="text" placeholder="请输入您将要创建的测试任务" autofocus issue-quick-editor ng-keydown="onKeyDown($event)" data-category="1" data-tag="test" />
+            </div>
+
+
+            <div>
+                <!--测试中-->
+                <issue-plain-list data-source="{{doing}}" data-title="待办中" data-name="doing"></issue-plain-list>
+                <!--修复中-->
+                <issue-plain-list data-source="{{repairing}}" data-title="修复中" data-name="repairing"></issue-plain-list>
+                <!--产品审核-->
+                <issue-plain-list data-source="{{reviewing}}" data-title="产品审核" data-name="reviewing"></issue-plain-list>
+                <!--已经完成-->
+                <issue-plain-list data-source="{{done}}" data-title="已完成" data-name="done" data-show-details="false"></issue-plain-list>
+            </div>
+
+            <issue-status-dropdown></issue-status-dropdown>
+        </div>
+        <div>
+    </div>
+    </textarea>
+
+    <textarea id="tmpl-issue-follow-icon">
+        <div class="follow-icon">
+            <i class="icon follow"></i>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-issue-follow-member-dropdown">
+        <div class="dropdown dropdown-tip members">
+            <ul class="dropdown-menu" ng-repeat="array in items">
+                <li ng-repeat="item in array">
+                    <a data-value="{{item.member_id}}">
+                        {{item.realname}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-issue-follow-members">
+        <div class="follow-members">
+
+            <ul class="follow-members">
+                <li class="follow-title">
+                    关注成员：
+                </li>
+                <li class="follow-member" ng-repeat="item in followMembers">
+                        {{item.realname}}
+                    <i class="icon remove" ng-click="removeFollow(item)" title="删除关注"></i>
+                </li>
+
+                <li class="follow-title no-follower" ng-if="followMembers.length==0">
+                    暂无
+                </li>
+                <li>
+                    <div class="follow" dropdown data-name="issue:follow" ng-hide="articleOnly" data-empty="添加关注">
+                        <issue-follow-icon></issue-follow-icon>
+                        <issue-follow-member-dropdown data-items="{{projectMember}}"></issue-follow-member-dropdown>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-issue-split-member-dropdown">
+        <div class="dropdown dropdown-tip members">
+            <ul class="dropdown-menu" ng-repeat="array in items">
+                <li ng-repeat="item in array">
+                    <a data-value="{{item.member_id}}">
+                        {{item.realname}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </textarea>
+
+    <textarea id="tmpl-issue-split">
+        <div class="issue-split">
+
+            <ul class="issue-split">
+                <li ng-repeat="item in issue.splitArr" issue-status-dropdown-action>
+                    <div class="issue-status" data-selected="{{item.status}}" ng-click="onClickStatus($event, item)">
+                        <i class="icon small" ng-class="item.status"></i>
+                    </div>
+                    <div class="title">{{item.title}}</div>
+
+                    <div class="operation">
+                        <div class="ids">#{{item.issue_id}}-{{item.id}}</div>
+
+                        <div class="member text-only" dropdown data-name="issue:split:{{item.id}}" data-text-container="label.display"  title="责任人" data-empty="{{item.realname || '责任人'}}">
+                            <i class="icon owner"></i>
+                            <label class="display">{{item.realname || '责任人'}}</label>
+                            <issue-split-member-dropdown data-split-id="item.id" data-member-id="item.owner"></issue-split-member-dropdown>
+                        </div>
+
+                        <div class="finish-date" ng-show="item.status!='done'" >
+                            <a datetime-picker data-name="plan_finish_time_{{item.id}}" data-date="{{item.plan_finish_time}}">
+                                <i class="icon date"></i>
+                                <span>{{(item.plan_finish_time | date:'yyyy-MM-dd') || '计划完成' }}</span>
+                            </a>
+                        </div>
+                        <!--
+                        <div ng-show="item.status=='done'" class="finish-date finished">
+                            <span>完成时间：{{(item.finish_time | date:'yyyy-MM-dd HH:mm:ss')}}</span>
+                        </div>
+                        -->
+                        <div class="toolbar">
+                            <a ng-click="splitEdit(item)" href="javascript:void(0)" class="edit">
+                                <i class="icon edit"></i>
+                                <span class="tollbar-text">编辑</span>
+                            </a>
+                            <a ng-click="splitDelete(item)" href="javascript:void(0)" class="delete">
+                                <i class="icon delete"></i>
+                                <span class="tollbar-text">删除</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="create" ng-show="issue.splited==1&&splitShow">
+                <input type="text" id="split-text" placeholder="请输入子任务的名称后回车" ng-model="recentSplit.title" ng-blur="blur()" ng-keydown="splitSave($event)">
+            </div>
+        </div>
+    </textarea>
+
+</div>

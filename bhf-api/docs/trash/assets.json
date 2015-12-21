@@ -1,0 +1,31 @@
+/*
+ 获取某个project下的的素材列表，用于关联素材与project
+ URL: /api/project/[project id]/asset
+ Method: GET
+
+ 获取某个issue下的素材列表
+ URL: /api/issue/[issue id]/asset
+ Method: GET
+
+ */
+{
+  //素材列表
+  "items": [
+    {
+      //素材编号
+      "id": 10,
+      //原文件名
+      "original_name": "file.psd",
+      //原文件名
+      "file_name": "",
+      //文件大小
+      "file_size": 1203819,
+      //描述
+      "description": "这个就是首页的psd了",
+      //文件类型
+      "file_type": "image/gif",
+      //文件的全路径
+      "url": "http://127.0.0.1/assets/12/019291.gif"
+    }
+  ]
+}

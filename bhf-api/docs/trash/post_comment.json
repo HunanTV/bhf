@@ -1,0 +1,9 @@
+/*
+ 创建一个issue
+ URL: /api/issue/[issue id]/comment
+ Method: POST
+ */
+{
+  //评论的内容
+  "content": "请见#1 号issue"
+}

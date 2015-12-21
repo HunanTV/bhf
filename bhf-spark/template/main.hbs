@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="mic">
+    <head>
+        {{import "module/head"}}
+        <base href="/">
+    </head>
+    <body>
+        <member-setting></member-setting>
+
+        <div class="loading" id="loading">
+            {{import "module/loading"}}
+            <div class="description">Loading...</div>
+        </div>
+        <ui-view></ui-view>
+    </body>
+    <!--{{now 'YYYY-MM-DD hh:mm:ss'}}-->
+</html>

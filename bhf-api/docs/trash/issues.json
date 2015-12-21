@@ -1,0 +1,29 @@
+/*
+  获取某个项目下的issue列表
+  URL: /api/project/[project id]/issue
+ */
+{
+  "items": [
+    {
+      "id": 10,
+      //issue的标题
+      "title": "首页更新",
+      //状态
+      "status": "进行中",
+      //标签，如bug/需求
+      "tag": "需求",
+      //责任人
+      "owner": "兰斌",
+      //创建人，这个需求是谁创建的
+      "creator": "张三",
+      //时间戳
+      "timestamp": "2014-03-20 10:10:10"
+    }
+  ],
+  "pagination": {
+    "page_size": 10,
+    "page_index": 1,
+    "page_count": 1,
+    "record_count": 100
+  }
+}

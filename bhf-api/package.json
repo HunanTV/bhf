@@ -1,0 +1,48 @@
+{
+  "name": "BHF",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node-dev app.coffee",
+    "test": "node-dev ./test/index.coffee"
+  },
+  "dependencies": {
+    "async": "",
+    "bijou": "",
+    "charm.js": "0.0.1",
+    "cheerio": "",
+    "coffee-script": "*",
+    "colors": "",
+    "connect-redis": "1.4.7",
+    "express-session": "^1.4.0",
+    "express.io": "^1.1.13",
+    "fs-extra": "^0.9.1",
+    "gitlab-few": "^0.0.6",
+    "gm": "^1.18.1",
+    "knex": "",
+    "lodash": "^2.4.1",
+    "marked": "^0.3.2",
+    "mime": "^1.2.11",
+    "moment": "^2.6.0",
+    "mysql": "^2.3.0",
+    "node-gitlab": "^1.0.0",
+    "node-markdown": "",
+    "node-uuid": "",
+    "notification-center-sdk": "git+http://git.hunantv.com/honey-lab/notification-center-sdk.git",
+    "psd": "^1.0.2",
+    "q": "^1.2.0",
+    "redis": "^0.10.3",
+    "request": "^2.40.0",
+    "shelljs": "^0.3.0",
+    "thumbnail-psd": "0.0.1",
+    "underscore": "",
+    "uuid": "^1.4.1",
+    "xml2js": "^0.4.4"
+  },
+  "devDependencies": {
+    "expect.js": "",
+    "grunt": "^0.4.5",
+    "mocha": "",
+    "request": "^2.58.0",
+    "should": "^7.0.1"
+  }
+}

@@ -1,0 +1,2944 @@
+module.exports = [{
+    "title": "芒果TV——专辑页大图集专辑信息样式调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1400428800000,
+    "finish_time": 1400428800000,
+    "plan_finish_time": 1400428800000,
+    "content": ""
+}, {
+    "title": "首页焦点图，需要最高支持8张，最小支持4张图",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1400169600000,
+    "finish_time": 1400169600000,
+    "plan_finish_time": 1400169600000,
+    "content": ""
+}, {
+    "title": "芒果TV——焦点图切换按钮调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1400169600000,
+    "finish_time": 1400169600000,
+    "plan_finish_time": 1400169600000,
+    "content": ""
+}, {
+    "title": "芒果TV帮助反馈",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1400169600000,
+    "finish_time": 1400169600000,
+    "plan_finish_time": 1400169600000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/page/website/page-help-1.html、http://honey.hunantv.com/hunantv.imgotv/css/page/website/page-help-1.css"
+}, {
+    "title": "芒果TV——专辑页新改动制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1400083200000,
+    "finish_time": 1400083200000,
+    "plan_finish_time": 1400083200000,
+    "content": ""
+}, {
+    "title": "芒果TV——头部用户信息选项卡调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399996800000,
+    "finish_time": 1399996800000,
+    "plan_finish_time": 1399996800000,
+    "content": ""
+}, {
+    "title": "芒果TV专辑页栏目左右按钮增加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399996800000,
+    "finish_time": 1399996800000,
+    "plan_finish_time": 1399996800000,
+    "content": ""
+}, {
+    "title": "1028下，昵称太长，会掉下来",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399996800000,
+    "finish_time": 1399996800000,
+    "plan_finish_time": 1399996800000,
+    "content": ""
+}, {
+    "title": "评论系统页面制作 nt;",
+    "tag": "需求",
+    "owner": "赵子璇",
+    "status": "done",
+    "timestamp": 1399910400000,
+    "finish_time": 1399910400000,
+    "plan_finish_time": 1399910400000,
+    "content": "mod/comment/mod-comment.less; page/comment/page-comment.less; comment/comment.html; image/comme"
+}, {
+    "title": "芒果TV——评论系统——喜欢成功状态制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399910400000,
+    "finish_time": 1399910400000,
+    "plan_finish_time": 1399910400000,
+    "content": ""
+}, {
+    "title": "没登录情况下评论默认头像",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399824000000,
+    "finish_time": 1399824000000,
+    "plan_finish_time": 1399824000000,
+    "content": ""
+}, {
+    "title": "评论举报默认第一个",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399824000000,
+    "finish_time": 1399824000000,
+    "plan_finish_time": 1399824000000,
+    "content": ""
+}, {
+    "title": "芒果TV——底层页评论数状态制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399824000000,
+    "finish_time": 1399824000000,
+    "plan_finish_time": 1399824000000,
+    "content": ""
+}, {
+    "title": "矮油咖来了专题制作\n",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399824000000,
+    "finish_time": 1399824000000,
+    "plan_finish_time": 1399824000000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/mgtv-special/bigrole/index.htm…//honey.hunantv.com/hunantv.imgotv/css/page/mgtv-special/bigrole/style.css"
+}, {
+    "title": "ie9 评论输入框点击时不能弹出登录层",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399651200000,
+    "finish_time": 1399651200000,
+    "plan_finish_time": 1399651200000,
+    "content": ""
+}, {
+    "title": "芒果TV——新专辑页面、专辑列表页 自适应制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399564800000,
+    "finish_time": 1399564800000,
+    "plan_finish_time": 1399564800000,
+    "content": ""
+}, {
+    "title": "芒果TV——新专辑页面、专辑列表页制作\n\n\n",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/page/website/page-album-1-list…|http://honey.hunantv.com/hunantv.imgotv/css/page/website/page-album-1.css"
+}, {
+    "title": "统一用户信息接口：播放器未登录情况下触发保存观看记录",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": ""
+}, {
+    "title": "统一用户信息接口：收藏",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": ""
+}, {
+    "title": "统一用户信息接口：评论获取用户信息",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": ""
+}, {
+    "title": "统一用户信息接口：弹层触发事件 HONEY-LOGIN-DONE",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": ""
+}, {
+    "title": "统一用户信息接口: header-info",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": ""
+}, {
+    "title": "评论举报需要用户登录后才能操作",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399478400000,
+    "finish_time": 1399478400000,
+    "plan_finish_time": 1399478400000,
+    "content": ""
+}, {
+    "title": "评论修改",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399392000000,
+    "finish_time": 1399392000000,
+    "plan_finish_time": 1399392000000,
+    "content": ""
+}, {
+    "title": "评论举报",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399392000000,
+    "finish_time": 1399392000000,
+    "plan_finish_time": 1399392000000,
+    "content": ""
+}, {
+    "title": "评论回车提交，包括验证码也需要能回车提交",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399392000000,
+    "finish_time": 1399392000000,
+    "plan_finish_time": 1399392000000,
+    "content": ""
+}, {
+    "title": "播放底层页评论数按钮增加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399392000000,
+    "finish_time": 1399392000000,
+    "plan_finish_time": 1399392000000,
+    "content": ""
+}, {
+    "title": "评论在ipad下的适配",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399392000000,
+    "finish_time": 1399392000000,
+    "plan_finish_time": 1399392000000,
+    "content": ""
+}, {
+    "title": "评论需要验证码的时候",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "评论发表成功的提示",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "评论系统——弹出提示层新调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "芒果TV首页焦点图调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "评论系统——举报按钮增加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "评论系统页面--回复评论箭头样式增加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "评论未验证用户的处理",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": ""
+}, {
+    "title": "芒果TV网络拥堵等待页面制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1399305600000,
+    "finish_time": 1399305600000,
+    "plan_finish_time": 1399305600000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/page/website/page-error.html"
+}, {
+    "title": "GJ006 注册时，密码有6-16位的限制，但是修改密码之后无此限制",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1399219200000,
+    "finish_time": 1399219200000,
+    "plan_finish_time": 1399219200000,
+    "content": ""
+}, {
+    "title": "评论的无刷新登录",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399219200000,
+    "finish_time": 1399219200000,
+    "plan_finish_time": 1399219200000,
+    "content": ""
+}, {
+    "title": "首页闪图5s切换",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399132800000,
+    "finish_time": 1399132800000,
+    "plan_finish_time": 1399132800000,
+    "content": ""
+}, {
+    "title": "观看记录，未登录情况下，使用前端存储",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1399132800000,
+    "finish_time": 1399132800000,
+    "plan_finish_time": 1399132800000,
+    "content": ""
+}, {
+    "title": "芒果TV-评论系统，“操作太过频繁”弹出提示层制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398787200000,
+    "finish_time": 1398787200000,
+    "plan_finish_time": 1398787200000,
+    "content": ""
+}, {
+    "title": "芒果TV播放页调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398787200000,
+    "finish_time": 1398787200000,
+    "plan_finish_time": 1398787200000,
+    "content": ""
+}, {
+    "title": "首页Desc",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1398700800000,
+    "finish_time": 1398700800000,
+    "plan_finish_time": 1398700800000,
+    "content": ""
+}, {
+    "title": "首页焦点图自动播放",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1398700800000,
+    "finish_time": 1398700800000,
+    "plan_finish_time": 1398700800000,
+    "content": ""
+}, {
+    "title": "芒果TV首页——每周热播模块制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398700800000,
+    "finish_time": 1398700800000,
+    "plan_finish_time": 1398700800000,
+    "content": "mod-weekhot.less"
+}, {
+    "title": "首页页面体积压缩减小一半",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398700800000,
+    "finish_time": 1398700800000,
+    "plan_finish_time": 1398700800000,
+    "content": ""
+}, {
+    "title": "个人页，左边栏跟随滚动",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1398700800000,
+    "finish_time": 1398700800000,
+    "plan_finish_time": 1398700800000,
+    "content": ""
+}, {
+    "title": "芒果TV首页轮换大图调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398700800000,
+    "finish_time": 1398700800000,
+    "plan_finish_time": 1398700800000,
+    "content": ""
+}, {
+    "title": "芒果TV首页背景调整，图文列表。加边框 ，加底色调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398614400000,
+    "finish_time": 1398614400000,
+    "plan_finish_time": 1398614400000,
+    "content": ""
+}, {
+    "title": "TCL芒果互联网电视台网互动项目——活动主页及K歌页面制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398614400000,
+    "finish_time": 1398614400000,
+    "plan_finish_time": 1398614400000,
+    "content": ""
+}, {
+    "title": "图片上增加 “高清”“独家”按钮  样式：.dj-ico,.hd-ico    HTML：&lt;span class=\"dj-ico\"&gt;独家&lt;/span&gt;        &lt;span class=\"hd-ico\"&gt;高清&lt;/span&gt;  加在LI里面",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398614400000,
+    "finish_time": 1398614400000,
+    "plan_finish_time": 1398614400000,
+    "content": ""
+}, {
+    "title": "头部导航自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398268800000,
+    "finish_time": 1398268800000,
+    "plan_finish_time": 1398268800000,
+    "content": ""
+}, {
+    "title": "首页的的时候，还是滚5个",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1398182400000,
+    "finish_time": 1398182400000,
+    "plan_finish_time": 1398182400000,
+    "content": "slide如果是4个item"
+}, {
+    "title": "视频播放页，播放器随页面大小自适应",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1398096000000,
+    "finish_time": 1398096000000,
+    "plan_finish_time": 1398096000000,
+    "content": ""
+}, {
+    "title": "视频播放页，头部不遮挡视频播放器",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1398096000000,
+    "finish_time": 1398096000000,
+    "plan_finish_time": 1398096000000,
+    "content": ""
+}, {
+    "title": "搜索结果页制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398096000000,
+    "finish_time": 1398096000000,
+    "plan_finish_time": 1398096000000,
+    "content": "page-search-9.html,page-search-6.less"
+}, {
+    "title": "搜索页自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398096000000,
+    "finish_time": 1398096000000,
+    "plan_finish_time": 1398096000000,
+    "content": ""
+}, {
+    "title": "专辑页分享有一个bug，导致专辑页分享无效",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1398096000000,
+    "finish_time": 1398096000000,
+    "plan_finish_time": 1398096000000,
+    "content": ""
+}, {
+    "title": "搜索系列页面浏览器自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "播放页浏览器自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "顶部的用户信息() 方法报错",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": "refresh"
+}, {
+    "title": "首页浏览器自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "首页body的class会频繁触发，造成页面频繁渲染，效率低下",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "扩展resize事件，避免resize过于频繁触发",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "首页大图window resize后，不能用",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "older在IE下切换panel位置不对了",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": "placeh"
+}, {
+    "title": "首页焦点图去掉文字背景",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "首页顶部与其他通用头部错位",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "slide 需要支持pad下的手势操作",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1398009600000,
+    "finish_time": 1398009600000,
+    "plan_finish_time": 1398009600000,
+    "content": ""
+}, {
+    "title": "大图在resize的时候有蛮多bug",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397923200000,
+    "finish_time": 1397923200000,
+    "plan_finish_time": 1397923200000,
+    "content": ""
+}, {
+    "title": "5 播放器的源，还需要等小明哥给接口，现在是不正确的",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397923200000,
+    "finish_time": 1397923200000,
+    "plan_finish_time": 1397923200000,
+    "content": "html"
+}, {
+    "title": "内页新版头部自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397923200000,
+    "finish_time": 1397923200000,
+    "plan_finish_time": 1397923200000,
+    "content": ""
+}, {
+    "title": "分享的地址需要由js拼成，静态页变更麻烦",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "弹层登录添加older",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": "placeh"
+}, {
+    "title": "ag需要用cookie记住打开的状态",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": "searcht"
+}, {
+    "title": "older在ie下有错误",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": "jquery.placeh"
+}, {
+    "title": "首页缩略图第二屏不显示",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "个人中心—账号设置—基本资料：地区不能选择",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "首页焦点图调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "播放底层正片播放 图片没有触发效果",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "直播页面头部与播放器间距20PX，直播播放器大小高度加40PX，直播播放器加白色边框",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "IE8及以下 登录注册页面默认提示文字无显示",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "首页大图尺寸应是460*270",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "新新新版首页头部的js效果",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "内页新版头部制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "头部文字 高度不统一",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "播放底层页加广告位",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397836800000,
+    "finish_time": 1397836800000,
+    "plan_finish_time": 1397836800000,
+    "content": ""
+}, {
+    "title": "首页焦点图位置调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "首页导航搜索下拉联动菜单制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "首页导航自适应调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "登录弹层第三方登录如果没有绑定帐号时的处理，现在没有作相关处理",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "视频播放-电影页需要增加短片，同时需要修复一个分享的bug",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "首页即时焦点增加计时",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "新版本的首页头部",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "新版本的首页焦点大图展示",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "新版的首页头部",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397750400000,
+    "finish_time": 1397750400000,
+    "plan_finish_time": 1397750400000,
+    "content": ""
+}, {
+    "title": "分享需要增加默认链接地址，获得焦点时选取",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": ""
+}, {
+    "title": " 这样的直接在模块内执行文件，会有个bug",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": "mod-hover-play.source.js"
+}, {
+    "title": "专辑的tab选择使用点击而不是hover",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": ""
+}, {
+    "title": "播放按钮替换",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": ""
+}, {
+    "title": "首页分辨率自适应制作(1024以下class=\"main1024\"\\1024-1280class=\"main1280)\\1280以上原样式{PS：个人觉得。。1280至以下。都用main1024就行}",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": ""
+}, {
+    "title": "<em class=\"tag\">GJ001</em> 检查密码强度的功能在ie6/7/8下有bug，万恶的ie",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": ""
+}, {
+    "title": "电视剧，综艺不要到最后，放在第一个",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": "focus的item"
+}, {
+    "title": "分享的复制链接在没有flash的情况下有问题",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397664000000,
+    "finish_time": 1397664000000,
+    "plan_finish_time": 1397664000000,
+    "content": ""
+}, {
+    "title": "黑色的搜索框也需要加上自动填充的效果，增加传颜色参数",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "统一header/1/2三个模块的js",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "调全部页面a:hover状态显示播放按钮样式，样式控制播放按钮显示",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "专辑页大图需要有点击效果，并转到最新一集播放页",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "header 栏频道白色浮层，触发关闭事件需要改进",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "观看记录层，在页面下拉后，就看不到了",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "ie 下的频道层，被遮住了",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "首页焦点图左右图标只在鼠标hover时出现",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "搜索页的小bug",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "播放器在大屏状态下，面对小分辨率电脑，就悲剧了",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "帮助反馈页提交",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "http://so.hunantv.com/so/k-%E5%BF%AB%E4%B9%90%E5%A4%A7%E6%9C%AC%E8%90%A5 增加样式",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "整合tv/show/movie三个页面的js到单独的js中",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "播放页面播放器加 40px 高度",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "首页搜索框，增加默认文字，获得焦点的时候清除文字",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "首页即时焦点栏的play图标默认全部显示了，应该只在鼠标放上去时显示",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397577600000,
+    "finish_time": 1397577600000,
+    "plan_finish_time": 1397577600000,
+    "content": ""
+}, {
+    "title": "白色搜索框有一个bug",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "首页头部二级导航制作 ，及间距调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "根据后端要求，将加载剧集的js单独拿出来，以便后台拆分模块",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "焦点大图点小图切换时，如果间隔超过1个，顺序就会出错",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "黑色搜索框的字体颜色要改一下",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "找回密码中的页面内容不居中",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "播放页针对电脑分辨率自适应 给body加class— 1024以下：main640; 1024-1280：main1024; PC1280*720——1600*900：main1280;",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "搜索页鼠标移上去显示播放按钮图标添加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "首页右下角的回到顶部，与提意见功能区",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "直播页面相关效果",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "older 跨浏览器支持",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": "placeh"
+}, {
+    "title": "专辑页大图增加鼠标移上去的播放图标",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/page/website/page-album.html"
+}, {
+    "title": "电视剧页年份的focus状态，对应正在播放的图标是错的",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397491200000,
+    "finish_time": 1397491200000,
+    "plan_finish_time": 1397491200000,
+    "content": ""
+}, {
+    "title": "slide 滚动到指点处的算法要改进",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "首页“即时推荐”加个鼠标移上去出现的播放按钮效果",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "播放器窗口边框样式增加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "左右翻页图文列表调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "专辑的片花及播放列表",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "专辑页和播放页中增加点击量",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "专辑中需要增加社交分享",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "分享的点踩弄反了",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "滚动图集，如果少于6个就不加载slider了",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "专题页的剧集列表没有hover，点击没效果",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "播放页focus当前播放视频",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "播放器的大尺寸显示",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "首页底部及头部调整（标志，搜索，及底部芒果互联网电视LOGO）",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "首页回到顶部按钮层级优先调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397404800000,
+    "finish_time": 1397404800000,
+    "plan_finish_time": 1397404800000,
+    "content": ""
+}, {
+    "title": "首页，返回顶部、提建议浮动按钮制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "头部观看记录需要按是否登录来区分某些显示",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "make minjs 压缩脚本",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "更多剧集不需要显示更多，由后台部分控制",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "分页有bug，不会显示第一页",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "lazyload 显示图片的时机有点不对",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "专辑页，需要将分页调整一下",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "专辑页内容无分页时间距调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "焦点图透明度调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397145600000,
+    "finish_time": 1397145600000,
+    "plan_finish_time": 1397145600000,
+    "content": ""
+}, {
+    "title": "播放页的心跳函数",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "首页焦点图除当前外图片变灰。。FF不支持",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "首页焦点大图切换时图片不对",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "首页搜索 下拉联动菜单调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "搜索页面，图文列表标题都改回两行结构",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "专辑页面结构需要修改",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "播放器",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "播放页图文A链接点击调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1397059200000,
+    "finish_time": 1397059200000,
+    "plan_finish_time": 1397059200000,
+    "content": ""
+}, {
+    "title": "播放页、专辑页图片高度调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "所有图片list设置宽度。放开高度调整；",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "用户观看记录，也需要加入删除记录的链接，和收藏记录一样的功能。 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/page/webucenter/index-15.html"
+}, {
+    "title": "所有图文列表标题设置一行溢出隐藏",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "登陆注册流程默认文字隐藏",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "用户中心的取消收藏",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "头部的频道不需要点击效果",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "分享浮层对齐调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "首页横版适配完成",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "找回密码进度指示器的样式",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "观看记录和收藏：暂无内容提示制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": "page/webucenter/index-23.html，page/webucenter/index-22.html"
+}, {
+    "title": "收藏需要判断用户是否登录，并更改收藏逻辑",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "分享中取消收藏宽度不够",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "地区选择需要设置默认值",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "404页面制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "搜索列表的hover有问题",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "搜索的剧集列表需要改一下",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": "html"
+}, {
+    "title": "找回密码流程第一步无状态样式增加",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "按节目名称搜索页：节目搜索框输入默认字体颜色不变，输入后字体颜色变为 333333；搜索结果，没有相关内容提示与上方间距改为30",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "搜索页，节目详情模块，去掉关注按钮",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "即时推荐页面，间距调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "首页底部模块新增内容制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "前台页面等与橙色相关的，统一用  #f06000。",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "相关剧集允许多个，并且第一页是静态生成",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "给logo加个链接",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "登录弹层手机验证",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "登录弹层回车提交",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "搜索输入框，输入后的字体用14号。输入后字体颜色改成333333",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "相当剧集的ajax不能使用随机数，会导致cdn一直刷新，需要做本地缓存",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "首页及时推荐需要增加播放按钮",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396972800000,
+    "finish_time": 1396972800000,
+    "plan_finish_time": 1396972800000,
+    "content": ""
+}, {
+    "title": "登录浮层之第三方登录",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "header 头，包括登录状态，以及观看记录的实现",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "头部，若登录，观看记录有“查看全部观看记录”链接",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "头部观看记录滚动条",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/website/page-play-1.html"
+}, {
+    "title": "找回密码之重发激邮件 ",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/webucenter/index-8.html"
+}, {
+    "title": "播放页的正在播放相关列表",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "兴趣爱好表单提交",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "通用顶部，输入框默认字体颜色是 555555   输入后字体颜色 保持现状不变。右边用户信息：去掉收藏，昵称与观看记录 间距为 20",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "header头部播放记录，登录未登录需要显示不同;头部搜索选项样式调整;",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "分享模块标志调整，标志颜色调整及增加标志透明度",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "找回密码发送手机验证码使用新接口，不使用和注册同一样的接口，不需要传递account信息",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "底层与专辑页，文字字号改成20号 字体颜色改成  #aaa，去掉分享到前面图标",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "没有分页时，线与文字间距“60”，在检索页面 没有分页的情况下，该样式一样存在该问题，相关文字色值改为#f06000",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": ""
+}, {
+    "title": "搜索页图文列表结构标签调整，使图片可点击（把包裹图片的DIV改成可点击的A标签）",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "mod-tagsearch-result-movie.less,mod-search-result-normal.less,page-search.html,page-search-4.html,page-search-7.html,page-search-6.html,page-search-8.html-html"
+}, {
+    "title": "找回密码之重设密码 ",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/webucenter/index-9.html"
+}, {
+    "title": "找回密码第三步，发送短信 ",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/webucenter/index-7.html"
+}, {
+    "title": "找回密码第一步，验证帐号和验证码 ",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/webucenter/index-5.html"
+}, {
+    "title": "头部登陆头像显示调整(,PS:用户登陆后，默认头像为背景)",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "mod-header.less,mod-header-1.less"
+}, {
+    "title": "头像编辑部分需要空白占位图片。即上传头像默认背景图片样式（改动：）",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396886400000,
+    "finish_time": 1396886400000,
+    "plan_finish_time": 1396886400000,
+    "content": "mod-ucenter-form.less,page-ucenter.less"
+}, {
+    "title": "注册流程",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "个人中心基本资料修改表单验证",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "5 播放器，主要用于pad及手机端等不支持flash情况下的终端",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": "html"
+}, {
+    "title": "地区选择器在火狐下有报错。",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "个人中心头像编辑 ，完成跨域提交方案。",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "所有视频列表中的鼠标 hover 效果",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "或者preventDefault，要不导致链接最后加了#而使页面跳到顶部",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": "share 组件，点击应该return false"
+}, {
+    "title": "标签收起",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "搜索年份数据的切换",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396800000000,
+    "finish_time": 1396800000000,
+    "plan_finish_time": 1396800000000,
+    "content": ""
+}, {
+    "title": "直播页面制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": "mod-channellist.less,mod-sidechannel.less,page-livetelecast.less,page-livetelecast.html"
+}, {
+    "title": "修改密码 ",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/webucenter/index-4.html"
+}, {
+    "title": "麻烦改个文件名",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "专辑焦点图描述文字加链接样式调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": "mod-album-bigpic.less"
+}, {
+    "title": "重发邮件",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "10秒自动返回到首页",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "登录浮层无刷新登录",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "首页焦点图，非focus图点击的时候不要跳转到链接",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "生日联动选择器",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "收藏与后台对接",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396540800000,
+    "finish_time": 1396540800000,
+    "plan_finish_time": 1396540800000,
+    "content": ""
+}, {
+    "title": "首页，所有横图鼠标移上的效果替换。",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "地区联动选择器",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "用户中心-消息列表",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "index-21.html,mod-message.less,page-message.less"
+}, {
+    "title": "用户中心-消息列表-消息底层页",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "index-20.html"
+}, {
+    "title": "用户登陆注册LOGO修改，验证码样式调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "个人中心密码找回，短信验证码。",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/page/webucenter/index-7.html"
+}, {
+    "title": "登录浮层",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "帮助反馈页，dropdown控件加入",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "用户登陆注册流程页面背景样式调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "用户中心-评论列表-发出的评论 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "index-19.html"
+}, {
+    "title": "用户中心-评论列表-收到的评论 ,",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "index-18.html,mod-comment.less,page-comment.less"
+}, {
+    "title": "登录注册页面，随机使用背景图片",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "赞和踩与后台的交互",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "用户中心-我的关注-底层页制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "index-17.html"
+}, {
+    "title": "所有搜索页的增加p://so.iqiyi.com/so/q_%E4%B8%80%E4%BB%86%E4%BA%8C%E4%B8%BB?r=811186694075），顶部搜索框和大搜索互显的关系。",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": "header-1,并做成浮动固定于页面顶部。需要增加一个效果（参考：htt"
+}, {
+    "title": "顶部频道导航",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "注册流程提示状态制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396454400000,
+    "finish_time": 1396454400000,
+    "plan_finish_time": 1396454400000,
+    "content": ""
+}, {
+    "title": "用户中心-关注列表样式调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": ""
+}, {
+    "title": "用户中心-收藏页面制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": "mod-collectlist.less,page-collectlist.less,index-16.html"
+}, {
+    "title": "用户中心-观看记录页面制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": "mod-watchlist.less,page-watchlist.less,index-15.html"
+}, {
+    "title": "检索结果元素样式调整",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": ""
+}, {
+    "title": "检索页竖图结果调整",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": ""
+}, {
+    "title": "关注动态—",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": "mod-myattention.less,page-myattention.less,index-12.html,index-13.html,index-14.html"
+}, {
+    "title": "用户登陆注册流程背景样式调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396368000000,
+    "finish_time": 1396368000000,
+    "plan_finish_time": 1396368000000,
+    "content": ""
+}, {
+    "title": "个人中心-找回密码流程：",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": "page-repassword.less,mod-repassword.less,index-5.html,index-6.html,index-7.html,index-8.html,index-9.html,index-10.html,index-11.html"
+}, {
+    "title": "检索页横图结果单行变双行",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "黑色header底色透明，内容无需透明",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "(帮助反馈页)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": "page-help.html page-help.less"
+}, {
+    "title": "调整黑色header头部间距，去掉“欢迎回来”",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "黑色header头部，底色半透明，内容不透明",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "所有搜索页增加，黑色header，并定位与页面顶部。",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "检索页横图结果字体调整成为12px",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "检索页横图结果展示调整",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "首页logo替换",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "帮助反馈页",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "个人中心-账号设置：基本资料，修改头像，兴趣爱好，修改密码页面提取",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": "mod-ucenter-form.less,mod-ucenter-sidenav.less,page-ucenter.less,index-1.html,,index-2.html,index-3.html,index-4.html"
+}, {
+    "title": "首页大图切换效果",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "登录注册  到hunantv.imgotv文件夹中",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": "html"
+}, {
+    "title": "专辑大图文字区增加阴影",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": ""
+}, {
+    "title": "搜索及跳转（给加入支持回车搜索的功能）",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396281600000,
+    "finish_time": 1396281600000,
+    "plan_finish_time": 1396281600000,
+    "content": "jQuery.autocomplete"
+}, {
+    "title": "（即时推荐）",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396195200000,
+    "finish_time": 1396195200000,
+    "plan_finish_time": 1396195200000,
+    "content": "page-instant-reco.html page-instant-reco.less"
+}, {
+    "title": "首页大图焦点图：下面的能不能放两行？",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1396195200000,
+    "finish_time": 1396195200000,
+    "plan_finish_time": 1396195200000,
+    "content": "sub title"
+}, {
+    "title": "搜索时的标签选择，及结果页的输出",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1396195200000,
+    "finish_time": 1396195200000,
+    "plan_finish_time": 1396195200000,
+    "content": ""
+}, {
+    "title": "/ 下的展开箭头样式有问题",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1396195200000,
+    "finish_time": 1396195200000,
+    "plan_finish_time": 1396195200000,
+    "content": "mod/mod-plot-list.html"
+}, {
+    "title": "黑色头部搜索框输入状态文字色值及登陆后昵称色值调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": ""
+}, {
+    "title": "首页、播放系列页、搜索系列页、检索系列页、专辑系列页面间距调整",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": ""
+}, {
+    "title": "头部的搜索提示",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": ""
+}, {
+    "title": "电视剧类型搜索页  ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": "page-search-8.html,page-search-5.less"
+}, {
+    "title": "播放页制作,",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": "page-play.html,page-play.less,page-play-1.html,page-play-1.less"
+}, {
+    "title": "剧集专辑页面 ",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": "page-album-series.html"
+}, {
+    "title": "图片只在屏幕中出现的时候加载显示，视频网站图片太多，不能一次加载所有图片，太影响性能",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": ""
+}, {
+    "title": "专辑页拼合 ",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": "page-album.html"
+}, {
+    "title": "检索页面-竖图版 页面代码",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": "page-search-6.html,page-search-2.less、搜索竖图版样式page-search-3.less，page-search-4.less,page-search-7.html  调整page-search-3.html,page-search-4.html"
+}, {
+    "title": "搜索页面制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395936000000,
+    "finish_time": 1395936000000,
+    "plan_finish_time": 1395936000000,
+    "content": "page-search-2.html,page-search-3.html,page-search-4.html,page-search-5.html,page-search-1.less"
+}, {
+    "title": "顶，踩操作",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": ""
+}, {
+    "title": "检索页面制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "page-search.html,page-search-1.html,page-search.less"
+}, {
+    "title": "分享到各平台",
+    "tag": "需求",
+    "owner": "易晓峰",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": ""
+}, {
+    "title": "内页公用头底 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "page-global-1.less ---搜索页公用头底 page-global-2.less"
+}, {
+    "title": "提取已做完部分到新目录结构",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": ""
+}, {
+    "title": "文件名 CSS 可以统一小写字母吧 (来自小明哥的呼唤)",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": ""
+}, {
+    "title": "芒果TV首页页面整合 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "index.html,page-global.less,page-index.less"
+}, {
+    "title": "  又一个图片列表滚动效果",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-normal-pic-slider.html"
+}, {
+    "title": "(分集剧情)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-plot-list.html mod-plot-list.less"
+}, {
+    "title": "(专题片花列表)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-album-trailer.html mod-album-trailer.less"
+}, {
+    "title": "即时新闻模块制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-piclist.html,mod-piclist.less"
+}, {
+    "title": "首页焦点图轮换模块 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-focuspic.less,mod-focuspic.html"
+}, {
+    "title": " 图片列表滚动效果",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/demos/mod/mod-movie-pic-slider.html"
+}, {
+    "title": "滚动公用基础组件，应该满足于页面所有类似效果",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": ""
+}, {
+    "title": "(专题栏目介绍)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-album-intro.html mod-album-intro.less"
+}, {
+    "title": "(专题页播放列表）",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "mod-album-playlist.html mod-album-playlist.less"
+}, {
+    "title": "搜索页面头部电影视频",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "intro模块 mod-search-filmIntro.less,mod-search-filmIntro.html"
+}, {
+    "title": "搜索页面头部剧集视频",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395849600000,
+    "finish_time": 1395849600000,
+    "plan_finish_time": 1395849600000,
+    "content": "intro模块 mod-search-tvIntro.less,mod-search-tvIntro.html"
+}, {
+    "title": "搜索页面头部综艺视频",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "intro模块 mod-search-varShowIntro.less,mod-search-varShowIntro.html"
+}, {
+    "title": "(专辑大图)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "mod-album-bigpic.less mod-album-bigpic.html"
+}, {
+    "title": " 上面的年份选择，有两条下划线",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "http://honey.hunantv.com/hunantv.imgotv/html/mod/mod-normal-pic-slider.html"
+}, {
+    "title": "检索结果页结果列表 ",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "mod-tagsearch-result-normal.less mod-tagsearch-result-movie.less mod-tagsearch-result-normal.html mod-tagsearch-result-movie.html"
+}, {
+    "title": "搜索结果页结果列表，",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "mod-search-result-normal.html mod-search-result-normal.less"
+}, {
+    "title": "搜索页头部制作 ",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "mod-header-2.less,mod-header-2.html"
+}, {
+    "title": "检索分类标签模块制作-",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "mod-searchTag.less,mod-searchTag.html,mod-searchTag-1.less,mod-searchTag-1.html"
+}, {
+    "title": "鼠标hover到封面图时显示播放按钮",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": ""
+}, {
+    "title": "分享模块制作-",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395763200000,
+    "finish_time": 1395763200000,
+    "plan_finish_time": 1395763200000,
+    "content": "mod-share.less,mod-share.html,.mod-share-float.less"
+}, {
+    "title": "(内页底部)",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-footer-1.less,mod-header-1.html"
+}, {
+    "title": "(首页底部)",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-footer.less,mod-header.html"
+}, {
+    "title": "整理视频播放页的样式，并按照模块提取",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": ""
+}, {
+    "title": "跟周萍学习切图大法，并且熟悉一下",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "less"
+}, {
+    "title": "(电影图片slider)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-movie-pic-slider.less mod-movie-pic-slider.html"
+}, {
+    "title": "(普通图片slider)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-normal-pic-slider.less mod-normal-pic-slider.html"
+}, {
+    "title": "(带字大图图片列表)",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-picboard-with-txt.less mod-picboard-with-txt.html"
+}, {
+    "title": "(无字大图图片列表）",
+    "tag": "需求",
+    "owner": "lanbin1987",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-picboard-without-txt.less mod-picboard-without-txt.html"
+}, {
+    "title": "翻页模块制作",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-page.less,mod-page.html"
+}, {
+    "title": "(首页头部)",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-header.less,mod-header.html"
+}, {
+    "title": "(内页头部)",
+    "tag": "需求",
+    "owner": "周萍",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": "mod-header-1.less,mod-header-1.html"
+}, {
+    "title": "192.168.3.113 服务器 svn 自动更新",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": ""
+}, {
+    "title": "测试服务器配置",
+    "tag": "需求",
+    "owner": "Lian Hsueh",
+    "status": "done",
+    "timestamp": 1395676800000,
+    "finish_time": 1395676800000,
+    "plan_finish_time": 1395676800000,
+    "content": ""
+}]

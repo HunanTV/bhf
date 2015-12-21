@@ -1,0 +1,14 @@
+#message改为stream了，不再使用message
+_entity = require '../entity'
+
+#保存消息
+exports.post = (sender_id, receiver_id, content, link, status)->
+  data =
+    sender_id: sender_id
+    receiver_id: receiver_id
+    timestamp: new Date().valueOf()
+    content: content
+    link: link
+    status: status || 'new'
+
+  _entity.message.save data, (err)-> console.log err

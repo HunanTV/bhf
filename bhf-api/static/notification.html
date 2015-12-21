@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script type="text/javascript" src="/upload/jquery.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script language="javascript">
+    io = io.connect('ws://localhost:8000')
+    var _elements = {}
+    function doneIssue(){
+        $.ajax(
+                {
+                    url: '/api/project/2/issue/504/status',
+                    type: 'PUT',
+                    data: {status: "done"},
+                    success: function(){
+
+                    }
+                }
+        )
+    }
+    function login(account, password){
+        $.ajax(
+                {
+                    url: '/api/session',
+                    type: 'POST',
+                    data: {
+                        account: account,
+                        password: password || '888888'
+                    },
+                    success: function(){
+                        io.emit('ready')
+                        loadMyProjects()
+                        console.log(arguments)
+                    }
+                }
+
+        )
+    }
+
+    function loadMyProjects(){
+        $.ajax(
+                {
+                    url: '/api/project',
+                    dataType: 'JSON',
+                    type: 'GET',
+                    success: function(data){
+                        data = JSON.parse(data)
+                        var html = ''
+                        var $o = $('#myProjects')
+                        for(var i = 0; i < data.items.length; i ++){
+                            var project = data.items[i]
+                            html += '<li><a href="javascript:talkToProject(' + project.id + ')">' + project.title + '(广播)</a></li>'
+                        }
+                        $o.html(html)
+                    }
+                }
+        )
+    }
+
+    function initElements(){
+        //登录
+        $('#login1').click(function(){
+            login('易晓峰')
+        })
+
+        $('#login2').click(function(){
+            login('兰斌')
+        })
+
+
+
+    }
+
+    function realMessage(event, data){
+        var message = {
+            event: event,
+            data: data
+        }
+        io.emit('message', message)
+    }
+
+    function talkToAll(){
+        realMessage('talk:all', {text: '哈哈，我是一条广播' + new Date().toString()})
+    }
+
+    function talkToProject(project_id){
+        realMessage('talk:project', {project_id: project_id, message: '房间内群发'})
+    }
+
+    function talkToMember(member_id){
+        realMessage('talk:member', {member_id: member_id, message: '对话某个人'})
+    }
+
+
+    var handler = {
+        //列新在线人数据
+        'online': function(response){
+            var data = response.data
+            var html = '<li><a href="#" onclick="talkToMember(' + data.id + ')">' + data.realname + '</a></li>'
+            $('#online').append(html)
+        },
+        'all': function(response){
+            console.log(response)
+        }
+    }
+
+    //状态被改变
+    io.on('message', function(response){
+        console.log('收到通知')
+        //response.event
+        var fn = handler[response.event] || handler['all']
+        fn(response)
+    })
+
+    io.on('connect', function(){
+        io.emit('ready')
+    })
+
+    $().ready(function(){
+        initElements()
+    })
+
+</script>
+<body>
+    <ul>
+        <li><a href="javascript:login('易晓峰')">易晓峰登录</a></li>
+        <li><a href="javascript:login('兰斌')">兰斌登录</a></li>
+        <li><a href="#">完成任务/改任务时间</a></li>
+        <li><a href="javascript:talkToAll()">发送广播</a></li>
+    </ul>
+
+   <h3>我参与的所有项目</h3>
+   <ul id="myProjects">
+
+   </ul>
+
+   <h3>当前在线的用户</h3>
+   <li id="online">
+
+   </li>
+</body>
+</html>

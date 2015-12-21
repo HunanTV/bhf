@@ -1,0 +1,14 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "request": "^2.57.0",
+    "socket.io-client": "^1.3.5"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.3"
+  },
+  "scripts": {
+    "start": "node-dev index.coffee"
+  }
+}

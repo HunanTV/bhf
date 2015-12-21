@@ -1,0 +1,23 @@
+/*
+ 查看具体的comment
+ URL: /api/comment/[comment id]
+ Method: GET
+
+ 删除：
+ URL: /api/comment/[comment id]
+ Method: DELETE
+
+ 修改：
+ URL: /api/comment/[comment id]
+ Method: PUT
+*/
+
+{
+  "id": 10,
+  //评论的内容
+  "content": "请见#1 号issue",
+  //创建人，这个评论是谁创建的
+  "creator": "张三",
+  //时间戳
+  "timestamp": "2014-03-20 10:10:10"
+}

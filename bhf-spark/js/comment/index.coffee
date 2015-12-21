@@ -1,0 +1,3 @@
+define [
+  './comment-directives'
+], ->

@@ -1,0 +1,47 @@
+<div class="editor">            
+    <div class="profile back" dropdown  ng-show="backList && backList.length > 0 && false">
+        <span>回滚版本</span>
+        <div class="dropdown dropdown-tip">
+            <ul class="dropdown-menu">
+                <li ng-repeat="item in backList" ng-click="onClickChoose(item.key)">
+                    <a class="text-overflow" href="javascript:" title="{{item.value}}"><i class="blue">{{item.time|timeAgo}}</i>&nbsp;&nbsp;{{item.value|rawText}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--
+    <ul class="nav">
+        <li class="simditor" data-field="markdown">Markdown</li>
+        <li class="markdown active" data-field="simditor">HTML</li>
+    </ul>
+
+    <div class="panel">
+        <div class="simditor" data-field="simditor">
+            <textarea rows="10" placeholder="这里输入内容" autofocus></textarea>
+        </div>
+        <div class="markdown" data-field="markdown">
+            <textarea rows="10"></textarea>
+        </div>
+    </div>
+    -->
+    <textarea rows="10" placeholder="这里输入内容" autofocus></textarea>
+    <div class="control">
+        <div class="left">
+            <button class="cancel default" ng-click="onClickCancel()">取&nbsp;&nbsp;消</button>
+        </div>
+        <div class="right">
+            <!--<label class="always_top" ng-show="showAlwaysTop">-->
+                <!--<input type="checkbox" ng-checked="always_top" />-->
+                <!--置顶-->
+            <!--</label>-->
+            
+
+            <button class="primary default" ng-click="onClickSubmit()">提&nbsp;&nbsp;交</button>
+            
+            <a class="" ng-click="onClickBack()"><i class="icon small"></i>历史版本</a>
+
+        </div>
+    </div>
+</div>
+
+

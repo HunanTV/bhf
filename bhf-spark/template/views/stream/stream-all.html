@@ -1,0 +1,106 @@
+<div>
+	<textarea id="tmpl-stream-list">
+		<div class="stream">
+			<stream-issue-day data-day="{{day}}" ng-repeat="day in days"></stream-issue-day>
+		</div>
+	</textarea>
+
+	<textarea id="tmpl-stream-issue-day">
+		
+		<div class="stream-day">
+			<div class="date-title" ng-class="today">{{day.timestamp | dateAgo}}</div>
+			<ul class="stream-body">
+				<stream-list-cell data-item="{{item}}" ng-repeat="item in day.items"></stream-list-cell>
+			</ul>
+
+		</div>
+
+	</textarea>
+
+	<textarea id="tmpl-stream-list-cell">
+		<li class="stream-cell">
+			<stream-issue-assigned data-item="{{item}}" ng-if="item.eventName=='issue:assigned'"></stream-issue-assigned>
+			<stream-issue-status-change data-item="{{item}}" ng-if="item.eventName=='issue:status:change'"></stream-issue-status-change>
+			<stream-issue-comment-post data-item="{{item}}" ng-if="item.eventName=='issue:comment:post'"></stream-issue-comment-post>
+			<stream-issue-asset-post data-item="{{item}}" ng-if="item.eventName=='issue:asset:post'"></stream-issue-asset-post>
+			<stream-issue-mention data-item="{{item}}" ng-if="item.eventName=='issue:mention'"></stream-issue-mention>
+			<stream-team-invitation data-item="{{item}}" ng-if="item.eventName=='team:invitation'"></stream-team-invitation>
+
+		</li>
+	</textarea>
+
+	<textarea id="tmpl-stream-issue-assigned">
+		<div>
+			<span class="stream-time">{{item.timestamp | timeAgo}}</span>
+			<span ng-if="member.member_id!=item.data.owner_id">{{item.sender}}为{{item.data.owner_name}}指定了任务</span>
+			<span ng-if="member.member_id==item.data.owner_id">{{item.sender}}为你指定了任务</span>
+			<a class="stream-title" href="/project/{{item.data.project_id}}/issue/{{item.data.issue_id}}">{{item.data.title}}</a>
+			<span ng-if="item.data.plan_finish_time">{{item.data.plan_finish_time|date:yyyy-mm-dd}}前完成</span>
+		</div>
+		
+
+	</textarea>
+
+	<textarea id="tmpl-stream-issue-status-change">
+	    <div>
+			<span class="stream-time">{{item.timestamp | timeAgo}}</span>
+			<i class="icon small pause" ng-class="item.data.status"></i>
+			<span ng-if="item.data.status=='done'">
+				{{item.sender}}完成了任务
+			</span>
+			<span ng-if="item.data.status=='doing'">
+				{{item.sender}}将任务状态改为正在进行中
+			</span>
+			<span ng-if="item.data.status=='pause'">
+				{{item.sender}}暂停了任务
+			</span>
+			<a class="stream-title" href="/project/{{item.data.project_id}}/issue/{{item.data.issue_id}}">{{item.data.title}}</a>
+		</div>
+	</textarea>
+
+	<textarea id="tmpl-stream-issue-comment-post">
+		<div>
+			<span class="stream-time">{{item.timestamp | timeAgo}}</span>
+			<span>{{item.sender}}添加了评论</span>
+			<a class="stream-title" href="/project/{{item.data.project_id}}/issue/{{item.data.issue_id}}">{{item.data.title}}</a>
+			<div class="comment" ng-bind-html="item.data.comment | unsafe">
+				
+			</div>
+		</div>
+		
+
+	</textarea>
+
+
+	<textarea id="tmpl-stream-issue-asset-post">
+		<div>
+			<span class="stream-time">{{item.timestamp | timeAgo}}</span>
+			<span>{{item.sender}}上传了附件</span><span class="file-name">{{item.data.original_name}}</span>
+			<a class="stream-title" href="/project/{{item.data.project_id}}/issue/{{item.data.issue_id}}">{{item.data.title}}</a>
+			<div ng-class="item.data.url | getAssetThumbnailClass" style="background-image: url({{item.data | assetThumbnail}})">
+			</div>
+		</div>
+	</textarea>
+
+	<textarea id="tmpl-stream-issue-mention">
+		<div>
+			<span class="stream-time">{{item.timestamp | timeAgo}}</span>
+			<span>{{item.sender}}提到了你</span>
+			<a class="stream-title" href="/project/{{item.data.project_id}}/issue/{{item.data.issue_id}}">{{item.data.title}}</a>
+			<div class="comment" ng-bind-html="item.data.content | unsafe">
+				
+			</div>
+		</div>	
+
+	</textarea>
+
+	<textarea id="tmpl-stream-team-invitation">
+		<div>
+			<span class="stream-time">{{item.timestamp | timeAgo}}</span>
+			<span>{{item.sender}}邀请你加入团队</span>
+			<a class="stream-title" href="/team/0/invite">{{item.data.teamName}}</a>
+		</div>	
+
+	</textarea>
+
+</div>

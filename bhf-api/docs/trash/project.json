@@ -1,0 +1,35 @@
+/*
+  查看某个具体项目的信息
+  URL: /api/project/[project id]
+  Method: GET
+
+  删除：
+  URL: /api/project/[project id]
+  Method: DELETE
+
+  修改：
+  URL: /api/project/[project id]
+  Method: PUT
+
+ */
+{
+  //项目的id，新建的时候不需要提供
+  "id": 10,
+  //项目标题
+  "title": "芒果网首页",
+  //项目的详细描述
+  "description": "芒果网的新版首页",
+  //指定具体的联系人，这个联系人是需求方的项目负责人
+  "contact": "张三",
+  //预计开始日期，即需求方期待什么时间开始，日期格式为yyyy-MM-dd hh:mm:ss
+  "start_date": "2014-03-20 10:10:10",
+  //预计结束日期
+  "end_date": "2014-03-20 10:10:10",
+  //仓库地址，可不填
+  "repos": "http://github.com/xxx/xxx",
+  //创建者，系统自动关联到创建人
+  "creator": "张三",
+  //创建时的时间戳
+  "timestamp": "2014-03-20 10:10:10"
+}
+

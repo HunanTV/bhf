@@ -1,0 +1,284 @@
+.project-menu{
+  font-size: 15px;
+  background-color: #cbcbcb;
+  position: relative;
+  height: 100%;
+
+  .master-menu{
+    margin: 8px 2px 0 0;
+
+    a:link, a:visited{
+      color: #333;
+    }
+  }
+
+  .badge.stat{
+    float: right;
+    width: auto;
+    padding: 0px 6px;
+  }
+
+  .master-menu>li{
+    overflow: hidden;
+
+    .inner{
+      display: block;
+      padding: 10px 0 6px 0;
+      overflow: hidden;
+      margin: 0 0 0 10px;
+      border-bottom: 1px solid #949494;
+    }
+
+    i, label{
+      display: block;
+      float: left;
+    }
+
+    label{
+      margin-left: 10px;
+    }
+
+    &.active{
+      background-color: #b6bccd;
+
+      .inner{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .sub-menu{
+    margin-left: 35px;
+    clear: both;
+
+    li{
+      padding: 6px 20px 6px 10px;
+      overflow: hidden;
+      clear: both;
+
+      a{
+        display: inline-block;
+        width: 90px;
+        &.wide{
+          width: 185px;
+        }
+      }
+    }
+  }
+
+  .myself {
+    .icon{
+      background-position: -40px -80px;
+    }
+
+    &.active .icon{
+      background-position: -80px -80px;
+    }
+  }
+
+  .test {
+    .badge.stat{
+      margin-right: 20px;
+    }
+
+    .icon{
+      background-position: -40px -680px;
+    }
+
+    &.active .icon{
+      background-position: -80px -680px;
+    }
+  }
+
+  .discussion{
+    .icon{
+      background-position: -40px -120px;
+    }
+
+    &.active .icon{
+      background-position: -80px -120px;
+    }
+  }
+
+  .asset{
+    .icon{
+      background-position: -40px -640px;
+    }
+
+    &.active .icon{
+      background-position: -80px -640px;
+    }
+  }
+
+
+  .issue-category{
+    .icon{
+      background-position: -40px -160px;
+    }
+
+    &.active .icon{
+      background-position: -80px -160px;
+    }
+
+    .title{
+      padding: 0 0 10px 0;
+      overflow: hidden;
+    }
+    .empty{
+      color: #999;
+      width: 100%;
+      text-align: center;
+    }
+    /*
+    button.setting{
+      background-color: transparent;
+      float: right;
+      width: 20px;
+      height: 20px;
+      .sprite();
+      margin-right: 16px;
+      background-position: -40px -400px;
+    }
+    */
+  }
+
+  .member{
+    .icon{
+      background-position: -40px -200px;
+    }
+
+    &.active .icon{
+      background-position: -80px -200px;
+    }
+
+    a.invite{
+      background-color: transparent;
+      float: right;
+      padding:  0 10px 0 0;
+      color: #666;
+      font-size: 12.5px;
+    }
+  }
+
+  .commit{
+    .icon{
+      background-position: -40px -240px;
+    }
+
+    &.active .icon{
+      background-position: -80px -240px;
+    }
+  }
+
+  .gitlab{
+    .icon{
+      background-position: -120px -800px;
+    }
+
+    &.active .icon{
+      background-position: -120px -800px;
+    }
+  }
+
+  .report{
+    .icon{
+      background-position: -40px -280px;
+    }
+
+    &.active .icon{
+      background-position: -80px -280px;
+    }
+  }
+
+  .stat{
+    .icon{
+      background-position: -160px -320px;
+    }
+
+    &.active .icon{
+      background-position: -80px -320px;
+    }
+  }
+
+  .document{
+    .icon{
+      background-position: -40px -600px;
+    }
+
+    &.active .icon{
+      background-position: -80px -600px;
+    }
+  }
+
+  .menu-bar{
+    @offsetHeight: 8px;
+    background-color: #333333;
+    color: #cbcbcb;
+    position: absolute;
+    bottom: @project-header-height + @offsetHeight;
+    width: 100%;
+    height: @project-header-height;
+    .display-flex();
+
+    & when (@show-global-message){
+      bottom: @project-header-height + @global-message-height + @offsetHeight;
+    }
+
+    .icon{
+      width: 20px;
+      height: 20px;
+    }
+
+    .item{
+      .display-flex-item();
+      text-align: center;
+      cursor: pointer;
+      padding-top: 12px;
+
+      .icon, span{
+        vertical-align: middle;
+        &.create{
+          background-position: -235px -359px
+        }
+      }
+      a.team{
+        color:#FFF;
+      }
+    }
+
+    .dropdown-tip{
+      bottom: 44px;
+    }
+
+//    .create{
+//      visibility: hidden;
+//      .icon{
+//        background-position: -240px -360px;
+//      }
+//
+//      .dropdown-tip{
+//        left: 10px;
+//        &:before, &:after{
+//          left: 40px;
+//        }
+//      }
+//    }
+
+    .setting{
+      text-align: left;
+      padding-left: 10px;
+      .icon{
+        background-position: -40px -400px;
+      }
+
+//      .dropdown-tip{
+//        left: auto;
+//        right: 10px;
+//        &:before, &:after{
+//          left: auto;
+//          right: 20px;
+//        }
+//      }
+    }
+  }
+}

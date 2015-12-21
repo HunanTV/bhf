@@ -1,0 +1,33 @@
+<div class="frame home-view full">
+    <header-global>
+        
+    </header-global>
+
+    <div class="content-view">
+        <project-editor></project-editor>
+        <div class="project-view half-view">
+            <h3 class="title">我的项目</h3>
+            <project-tiles></project-tiles>
+        </div>
+
+        <div class="chart-view half-view">
+            <h3 class="title">统计概览</h3>
+            <div class="chart-box">
+                <h3>年度项目完成任务Top 5</h3>
+                <div class="chart" issue-finished-total-chart data-name="project"></div>
+            </div>
+
+<!--             <div class="chart-box">
+                <h3>年度开发者完成任务Top 5</h3>
+                <div class="chart" issue-finished-total-chart data-name="member"></div>
+            </div> -->
+
+            <index-team-finished-chart></index-team-finished-chart>
+
+            <!--<div>-->
+                <!--<h3>历史最高</h3>-->
+                <!--<git-commit-total-chart></git-commit-total-chart>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>

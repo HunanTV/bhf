@@ -1,0 +1,140 @@
+<div>
+    <!--用户登录/注册模块-->
+    <textarea id="tmpl-member-authority">
+        <div class="frame login-view full">
+            <div class="box">
+                <div class="welcome">
+                    <div class="logo"></div>
+                    <h3>
+                        欢迎登录BHF
+                    </h3>
+                    <p class="slogan">
+                        Just for fun
+                    </p>
+                    <p>
+                        <img src="/images/qr-ios-beta.png" style="width: 200px;" title="猜猜我是谁"/>
+                    </p>
+                    <!--<ul class="news">-->
+                        <!--<li>-->
+                            <!--<h4>公告</h4>-->
+                        <!--</li>-->
+                        <!--<li><a href="/wiki/17/issue/2607">BHF2.0版本发布</li>-->
+                    <!--</ul>-->
+                </div>
+
+                <div class="body-form">
+                    <div class="inner" authority-panel>
+                        <div class="sign-in">
+                            <sign-in></sign-in>
+                        </div>
+                        <div class="sign-up">
+                            <sign-up></sign-up>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </textarea>
+
+    <!--用户登录-->
+    <textarea id="tmpl-member-signin">
+        <form>
+            <ul>
+                <li class="error">
+                    <span>{{error}}</span>
+                </li>
+         <!--        <li ng-show="model.openid_token">
+                    <span>这是您第一次使用openid登录<br/>请登录您的BHF账号来进行绑定</span>
+                </li> -->
+                <li>
+                    <input type="text" autofocus="true" ng-model="model.account" class="text" placeholder="E-mail或者用户名">
+                </li>
+                <li>
+                    <input type="password" maxlength="16" ng-model="model.password" class="text" placeholder="密码">
+                </li>
+                <li class="additional">
+                    <label>
+                        <input type="checkbox"  ng-model="model.remember" />记住密码
+                    </label>
+                    <a href="javascript:void(0)" ng-click="onClickResetPassword()">忘记密码</a>
+                </li>
+                <li>
+                    <button ng-click="onSubmitSignIn()">登&nbsp;&nbsp;&nbsp;&nbsp;录
+                    </button>
+                </li>
+
+                <li ng-show="!model.openid_token">
+                    <button ng-click="openidLogin()">OpenId登录
+                    </button>
+                </li>
+                
+                <!--暂不允许用户主动注册-->
+                <!--
+                <li class="right additional">
+                    <a href="javascript:void(0)" ng-click="onClickSwitchPanel('-350px')">还没有帐号吗？</a>
+                </li>
+                -->
+            </ul>
+        </form>
+    </textarea>
+
+    <!--用户注册-->
+    <textarea id="tmpl-member-signup">
+        <form ng-submit="onClickSignUp()">
+            <ul sign-up>
+                <li class="error">
+                    <span>{{error}}</span>
+                </li>
+                <li>
+                    <input type="text" autofocus="true" ng-model="model.realname" class="text" placeholder="您的真实姓名" required ng-minlength="2" ng-maxlength="4" name="realname">
+                </li>
+                <li>
+                    <input type="email" class="text" placeholder="请输入您的常用邮箱"
+                           ng-model="model.email" required name="email">
+                </li>
+                <li>
+                    <input type="password" ng-minlength="6" ng-maxlength="16" class="text" placeholder="设置您的密码"
+                           ng-model="model.password" required name="password">
+                </li>
+                <li>
+                    <input type="password" ng-minlength="6" ng-maxlength="16" class="text" placeholder="请重复您的密码"
+                           ng-model="model.confirmPassword" required name="confirmPassword">
+                </li>
+                <li>
+                    <button>
+                        注&nbsp;&nbsp;&nbsp;&nbsp;册
+                    </button>
+                </li>
+                <li class="right additional">
+                    <a href="javascript:void(0)" ng-click="onClickSwitchPanel('0px')">已经注册？马上登录</a>
+                </li>
+            </ul>
+        </form>
+    </textarea>
+
+    <!--邀请成员-->
+    <textarea id="tmpl-member-invite">
+        <div class="modal">
+            <div class="inner">
+                <a class="close-modal" rel="modal:close"><i class="icon"></i></a>
+                <header>
+                    邀请新成员
+                </header>
+                <section>
+                    <form class="standard-form">
+                        <div class="row">
+                            将邀请链接发给其它同事，他们就可以用这个邀请链接注册并加入此项目
+                        </div>
+                        <div class="row" ng-repeat="item in invitedMember">
+                            <input class="text large" value="{{host}}/invite/{{item.token}}">
+                        </div>
+                        <div class="row">
+                            <button class="primary default" ng-click="onClickInvite()">生成</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </textarea>
+</div>

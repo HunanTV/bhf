@@ -1,0 +1,74 @@
+@import "/module/global";
+@import "/module/loading";
+@import "/module/normalize";
+@import "/module/project-menu";
+@import "/module/project-header";
+@import "/module/issue";
+@import "/module/editor";
+@import "/module/hack";
+@import "/module/login";
+@import "/module/project";
+@import "/module/home";
+@import "/module/jquery.dropdown.less";
+@import "/module/project-weekly-report";
+@import "/module/assets";
+@import "/module/print";
+@import "/module/github-markdown";
+@import "/module/project-tiles";
+@import "/module/form";
+@import "/module/other";
+@import "/module/stream";
+@import "/module/gitlab";
+
+html{
+  height: 100%;
+  overflow: hidden;
+}
+
+body{
+  color: #333;
+  height: 100%;
+  font-size: 14px;
+  font-family: "微软雅黑", sans-serif;
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a:link{
+  color: #336699;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+*{
+  outline: none;
+}
+
+.global-message{
+  font-size: 12px;
+  & when (@show-global-message = false){
+    display: none;
+  }
+
+  background-color: #52618a;
+  height: @global-message-height;
+  width: 100%;
+
+  color: #FFF;
+  a, span{
+    margin-top: 10px;
+    color: #FFF;
+    display: inline-block;
+  }
+
+  span{
+    margin: 0 10px 0 15px;
+  }
+}
